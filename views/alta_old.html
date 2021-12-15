@@ -1,0 +1,117 @@
+<main style="margin: 3em 0;">
+    <section class="seccion__alta-producto">
+        <form action="alta.php" method="post" enctype="multipart/form-data">
+            <article class="alta-article">
+                <fieldset id="alta-fieldset">
+                    <legend class="alta-legend">Alta de producto</legend>
+                    <p class="invisible alta-input-text">
+                        <label for="producto_id">Id</label>
+                        <INPUT type="text" id="producto_id">
+                    </p>
+                    <p  class="invisible alta-input-text">
+                        <LABEL for="producto_sku">SKU</LABEL>  
+                        <INPUT type="text" id="producto_sku">
+                    </p>
+                    <p class=" alta-input-text">
+                        <LABEL for="producto_nombre">Descripción corta (35 chars)</LABEL>  
+                        <INPUT type="text" id="producto_nombre" maxlength="35">
+                    </p>
+                    <p class=" alta-input-text">
+                        <LABEL for="producto_descripcion">Detalles</LABEL>  
+                        <textarea name="producto_descripcion" id="producto_descripcion"></textarea>
+                    </p>
+                    <p  class="invisible alta-input-text">
+                        <LABEL for="producto_fechaAlta">Fecha Alta</LABEL>  
+                        <INPUT type="text" id="producto_fechaAlta">
+                    </p>
+                    <p class="invisible alta-input-text">
+                        <LABEL for="producto_estado">Estado</LABEL>  
+                        <INPUT type="text" id="producto_estado">
+                    </p>
+                    <p class="alta-input-combo">
+                        <LABEL for="producto_Categoria">Categoría</LABEL>  
+                        <select name="producto_Categoria" id="producto_Categoria" class="alta-input-combo">
+                            <option value = "Celulares">Celulares</option>
+                            <option value = "Drones">Drones</option>
+                            <option value = "Fotografía">Fotografía</option>
+                            <option value = "Ordenadores" selected>Ordenadores</option>
+                            <option value = "TV">TV</option>
+                            <option value = "Otros">Otros</option>
+                        </select>
+                    </p>
+                    <p class="alta-input-combo">
+                        <LABEL for="producto_precio">Precio lista ($)</LABEL>  
+                        <INPUT type="number" id="producto_precio" value="0" min="0" required>
+                    </P>
+                    <p class="alta-input-combo">
+                        <LABEL for="producto_stock">Existencias</LABEL>  
+                        <INPUT type="number" id="producto_stock" value="0" min="0" step="1" required>
+                    </P>
+                    
+                    <p class="invisible alta-input-combo">
+                        <LABEL for="producto_promocion">Promoción</LABEL>  
+                        <INPUT type="text" id="producto_promocion">
+                    </P>
+                    <div class="alta-input-imagenes">
+                        <p>
+                            <LABEL for="producto_imagen_01">Imagen 01</LABEL>  
+                            <INPUT type="file" id="producto_imagen_01" onchange="preview_01()">
+                        </p>
+                        <p>
+                            <LABEL for="producto_imagen_02">Imagen 02</LABEL>  
+                            <INPUT type="file" id="producto_imagen_02"  onchange="preview_02()">
+                        </p>
+                        <p>
+                            <LABEL for="producto_imagen_03">Imagen 03</LABEL>  
+                            <INPUT type="file" id="producto_imagen_03"  onchange="preview_03()">
+                        </p>
+                        
+                        <div class="alta-imagenes-preview">
+                            <img id="frame_01" src="img/NN_03_h75w75.png" class="producto_imagen" alt="Imagen 01"/>
+                            <img id="frame_02" src="img/NN_03_h75w75.png" class="producto_imagen" alt="Imagen 02"/>
+                            <img id="frame_03" src="img/NN_03_h75w75.png" class="producto_imagen" alt="Imagen 03"/>
+                        </div>
+                    </div>
+                    <p class="alta-input-combo">
+                        <LABEL for="producto_fabricanteId" >Fabricante</LABEL>  
+                        <select name="producto_fabricanteId" id="producto_fabricanteId">
+                            <option value="01">Sony</option>
+                            <option value="02">JBL</option>
+                            <option value="03">Canon</option>
+                            <option value="04">DJI</option>
+                            <option value="05">Google</option>
+                            <option value="06">Samsung</option>
+                            <option value="07">Apple</option>
+                            <option value="08">Philips</option>
+                            <option value="09">RCA</option>
+                        </select>
+                    </p>
+                    <p class="invisible alta-input-text">
+                        <LABEL for="producto_linkInfoTech">Info. Técnica (enlace)</LABEL>  
+                        <INPUT type="text" id="producto_linkInfoTech">
+                    </p>
+                    <p class="alta-input-combo">
+                        <LABEL for="producto_calificacion">Calificacion</LABEL>  
+                        <select name="producto_calificacion" id="producto_calificacion">
+                            <option value="01">01 estrella</option>
+                            <option value="02">02 estrellas</option>
+                            <option value="03">03 estrellas</option>
+                            <option value="04">04 estrellas</option>
+                            <option value="05">05 estrellas</option>
+                        </select>
+                    </p>
+                    <p class="alta-input-check">
+                        <label for="shipping">Envío sin cargo</label>
+                        <input type="checkbox" name="shipping" id="shipping" value="si">
+                    </p>
+                    <p class="alta-bloque-btn">
+                        <input type="submit" value="Dar de alta" class="alta-btn-form">
+                        <input type="reset" value="Limpiar formulario" class="alta-btn-form">
+                    </p>
+                    </fieldset>
+            </article>    
+
+    </form>
+
+</section>
+</main>

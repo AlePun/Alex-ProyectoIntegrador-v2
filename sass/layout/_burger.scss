@@ -1,0 +1,83 @@
+/*
+    Todos los estilos necesarios para trabajar con la animación de la hamburguesa
+*/
+
+// .menu-toggle__container{
+//     display:none;
+// }
+
+.menu-toggle__label{
+    display:flex;
+    flex-direction: column;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+// .menu-toggle__pan-arriba,
+// .menu-toggle__medallon,
+// .menu-toggle__pan-abajo {
+//     background: var(--clr-orange);
+//     border-radius: 5px;
+//     height: 3px;
+//     margin: 5px 0;
+//     transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+// }
+
+// .menu-toggle__pan-arriba{
+//     width: 70%;
+// }
+// .menu-toggle__medallon{
+//     width: 70%;
+// }
+// .menu-toggle__pan-abajo{
+//     width: 70%;
+// }
+
+#menu{
+    display:none;  
+    //~ 
+    &:checked ~ .nav-bar {
+        display: block;
+    }
+    &:checked ~ .menu-toggle__pan-arriba{
+        width: 50%;
+        transform-origin:bottom;
+        transform: rotateZ(45deg) translate(8px,0px);
+    }
+    &:checked ~ .menu-toggle__medallon{
+        width: 100%;
+        transform-origin:top;
+        transform: rotateZ(-45deg);
+    }
+    &:checked ~ .menu-toggle__pan-abajo{
+        width: 75%;
+        transform-origin:bottom;
+        transform:  translate(11px,-11px) rotateZ(45deg) ;
+    }
+}
+
+@media (max-width: 768px) {
+    #nav-icon1 {
+        display: block;
+    }
+    .main-header {
+        flex-direction: column;
+    }
+    .menu-toggle__container{
+        display: grid;
+    }
+    .nav-bar {
+        display: none;
+    }
+    .nav-bar__nav-list {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 560px) {
+    .nav-bar__nav-list {
+        flex-direction: column !important;
+    }
+}    

@@ -1,0 +1,21 @@
+.u-text-align-center { text-align: center; }
+.u-text-align-justify { text-align: justify; }
+.u-text-align-left { text-align: left; }
+.u-text-align-right { text-align: right; }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.no-decoration{
+    text-decoration: none;
+    font-size: 1em;
+    color: var(--clr-white);
+}
+
+.invisible{
+    display:none;
+}

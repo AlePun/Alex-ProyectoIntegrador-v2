@@ -1,0 +1,117 @@
+[
+    {
+    "id": 4,
+    "imagen": "img/productos/notebook-lenovo.jpg",	
+    "titulo": "Notebook Lenovo-4579",
+    "evaluacion": 3,	
+    "evaluadores": 7,
+    "precioLista": 75320,
+    "precioDto": 65320,
+    "observacion01": "32GB",
+    "observacion02": "15.6",		
+    "observacion03":"i7"
+    },
+    {
+        "id": 5,
+    "imagen": "img/productos/apple-iphone-11-pro-max.jpg",		
+    "titulo": "iphone 11 pro max",
+    "evaluacion": 4,
+    "evaluadores": 14,
+    "precioLista": 75320,
+    "precioDto":	65320,
+    "observacion01": "5G",
+    "observacion02": "Wi-Fi",
+    "observacion03": "Apple"
+    },
+    {
+    "imagen": "img/productos/auriculares-sony.jpg",
+    "titulo": "Sony WH-CH510",
+    "evaluacion": 5	,
+    "evaluadores":	300,
+    "precioLista":	9500,
+    "precioDto":	5700,
+    "observacion01": "Wi-Fi",
+    "observacion02": "Stereo",
+    "observacion03": "35 hrs"
+    },
+    {
+    "imagen": "img/productos/google-nest-mini.jpg",
+    "titulo": "Google Nest Mini",
+    "evaluacion": 1,
+    "evaluadores": 90,
+    "precioLista": 3320,
+    "precioDto": 2850,
+    "observacion01": "8GB",
+    "observacion02": "Bluetooth"
+    },
+    {
+    "imagen": "img/productos/samsung-galaxy-s21-plus-5g.jpg",
+    "titulo": "Galaxy | S21+",
+    "evaluacion": 5,
+    "evaluadores": 27,
+    "precioLista": 50000,
+    "precioDto": 49990,
+    "observacion01": "PPP",
+    "observacion02": "5G",
+    "observacion03": "32GB"
+    },
+    {
+    "imagen": "img/productos/drone-dji.jpg",
+    "titulo": "Dji Maverick",
+    "evaluacion": 4,
+    "evaluadores": 3,
+    "precioLista": 120000,
+    "precioDto": 99990,
+    "observacion01": "32Mpx",
+    "observacion02": "3hrs",
+    "observacion03": "Return"
+    },
+    {
+    "imagen": "img/productos/notebook-lenovo.jpg",
+    "titulo": "Notebook HP-4579",
+    "evaluacion": 5,
+    "evaluadores": 7,
+    "precioLista": 75320,
+    "precioDto": 65320,
+    "observacion01": "32GB",
+    "observacion02": "15.6",
+    "observacion03": "i7"
+    },
+    {
+    "imagen": "img/productos/dji-mavic-2-pro.jpg",
+    "titulo": "Notebook HP-4579",
+    "evaluacion": 5,
+    "evaluadores": 7,
+    "precioLista": 75320,
+    "precioDto": 65320,
+    "observacion01": "32GB",
+    "observacion02": "15.6",
+    "observacion03": "i7"
+    },
+    {
+    "imagen": "img/productos/chromecast-google.jpg",
+    "titulo": "Notebook HP-4579",
+    "evaluacion": 5,
+    "evaluadores": 7,
+    "precioLista": 75320,
+    "precioDto": 65320
+    },
+    {
+    "imagen": "img/productos/google-nest-mini.jpg",
+    "titulo": "Notebook HP-4579",
+    "evaluacion": 5,
+    "evaluadores": 7,
+    "precioLista": 75320,
+    "precioDto": 65320,
+    "observacion01": "Ni idea de los beneficios"
+    },
+    {
+    "imagen": "img/productos/drone-dji.jpg",
+    "titulo": "Notebook HP-4579",
+    "evaluacion": 5,
+    "evaluadores": 7,
+    "precioLista": 75320,
+    "precioDto": 65320,
+    "observacion01": "Cámara Full HD integrada"
+    }
+]

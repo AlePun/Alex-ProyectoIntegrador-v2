@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/NN_02_h75w75.png"/>
+    <title>Connecticus | Soluciones tech para usuarios inteligentes!</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- cspell:dictionaries lorem-ipsum -->
+
+    <style>
+
+.cuerpoprincipal{
+    width: 90%;
+    margin: 0 auto 3em;
+}
+
+.cuerpoprincipal h1{
+    background-color: var(--clr-blue);
+    color: var(--clr-white);
+    font-size: 2.5em;
+    padding: 0.8em;
+    text-align: center;
+}
+
+.cuerpoprincipal h2{
+    color: var(--clr-blue);
+    background-color: var(--clr-white);
+    border-bottom: 3px solid;
+    font-size: 1.8em;
+    padding: 0.5em;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.cuerpoprincipal  h3{
+    color: var(--clr-blue);
+    background-color: var(--clr-white);
+    border-bottom: 3px solid;
+    font-size: 1.3em;
+    padding: 0.5em;
+    text-align: left;
+    margin-bottom: 0.5em;
+    margin-left: 0.5em;
+}
+
+.cuerpoprincipal p{
+    font-size: 0.8 em;
+    padding: 0.5em;
+    text-align: left;
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+    </style>
+
+
+</head>
+<header class="main-header">
+    
+    <div class="main-header__linea-bienvenida">
+        <p> <u>Promo primera compra</u> | <em>Código: <b>MiCompra15%</b></em></p>
+        <div>
+            <p>Redes Sociales: 
+                <a href="http://www.facebook.com/apundyk" target="_blank" class="no-decoration" title="En general sumo solo a familia y amigos, sos bienvenido!">
+                    <i class="fa fa-facebook" style="padding: 3px;"></i> 
+                </a>
+                <a href="http://www.instagram.com/apundyk" target="_blank" class="no-decoration" title="No lo uso mucho, pero nunca se sabe">
+                    <i class="fa fa-instagram" style="padding: 3px;"></i> 
+                </a>
+                <a href="http://www.linkedin.com/in/apundyk" target="_blank" class="no-decoration" title="Contactame por Linkedin">
+                    <i class="fa fa-linkedin" style="padding: 3px;"></i>
+                </a>    
+                <a  href="https://api.whatsapp.com/send?phone=5491158325218&text=Hola%20Quiero%20hacerles%20una%20consulta" target="_blank" class="no-decoration" title="Consultas por Whatsapp">
+                    <i class="fa fa-whatsapp" style="padding: 3px;"></i>
+                </a>    
+            </p>
+        </div>
+    </div>
+    
+    <div class="search-bar">
+        <!-- Logo con lik a index.html -->
+        <a href="index.html" class="search-bar__logo-container"></a>
+        <!-- Formulario de búsqueda, con combo tipoProducto -->
+        <form class="search-bar__form-container">
+            <!-- <label for="TipoProducto" class="search-bar__form-label ">Buscar: </label> -->
+            <select name = "TipoProducto" id="TipoProducto">
+                <option value = "Celulares">Celulares</option>
+                <option value = "Drones">Drones</option>
+                <option value = "Fotografía">Fotografía</option>
+                <option value = "Ordenadores" selected>Ordenadores</option>
+                <option value = "TV">TV</option>
+                <option value = "Otros">Otros</option>
+            </select>
+            <!-- <label class="search-bar__form-label" for="busqueda">Buscar </label> -->
+            <input class="search-bar__form-search" id="buscar" type="search">
+            <button type="submit"  ><i class="fa fa-search"></i></button>
+        </form>
+
+        <!-- Este form lo coloco por el btn que contiene... -->
+        <form action="#" class="search-bar__carrito-container">
+            <div >
+                <button type="submit" style="font-size: 1.3em;" ><i class="fa fa-cart-plus"></i></button>
+            </div>
+        </form>
+
+            
+            <div class="menu-toggle__container"> 
+                <label for="menu" class="menu-toggle__label">
+                <!-- Si dejo el input acá, funciona la animación pero no me afecta al menú...  -->
+                <!-- <input type="checkbox" id="menu"/>  -->
+                <span class=" menu-toggle__pan-arriba"></span>
+                <span class=" menu-toggle__medallon"></span>
+                <span class=" menu-toggle__pan-abajo"></span>
+                </label>
+        </div>
+        
+    </div>
+    
+    <!-- Tengo que dejar el input acá para que funcione el toggle con el menú, pero no me funciona la animación con el Btn -->
+    <input type="checkbox" id="menu"/>
+
+    <nav class="nav-bar">
+        <ul class="nav-bar__nav-list">
+                <li>
+                    <a class="nav-bar__nav-link" href="index.html">Inicio</a>
+                </li>
+                <li>
+                    <a class="nav-bar__nav-link" href="alta.html">Alta</a>
+                </li>
+                <li>
+                    <a class="nav-bar__nav-link" href="contacto.html">Contacto</a>
+                </li>
+                <li>
+                    <a class="nav-bar__nav-link" href="nosotros.html">Nosotros</a>
+                </li>
+                <li>
+                    <a class="nav-bar__nav-link nav-bar__nav-link-active" href="memoria.html">Memoria</a>
+                </li>
+                <li>
+                    <a class="nav-bar__nav-link " href="definiciones.html">Definiciones</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+<body>
+
+    <section class="memoria">
+        <h1 style="
+            background-color: var(--clr-blue);
+            color: var(--clr-white);
+            font-size: 2.5em;
+            padding: 0.8em;
+            text-align: center;"
+            >
+            PROYECTO INTEGRADOR: E-COMMERCE CONNECTICUS
+        </h1>
+
+        <object data="documentacion.pdf" type="application/pdf" style="width: 100%; border: none; height: 30em;">
+            <embed src="documentacion.pdf" type="application/pdf" />
+        </object>
+
+
+</section>
+    
+    <!--    *********************************************** -->
+    <!--    Espacio común para el footer                    -->
+    <!--    *********************************************** -->
+
+    <!-- Definir las medias correspondientes para el suscriptor -->
+    
+    <footer class="footer">
+        <article>
+            <h2 style="text-align:center; font-size: 2.5em; padding-top: 1em;"></h2>
+        </article>
+        <article>
+            <div class="separador-footer">
+                <div class="columna-footer">
+                    <h2>Acerca de</h2>
+                    <div>
+                        <p><a href="https://pundyk.com.ar/" title="font awesome" class="columna-footer__a">pundyk.com.ar</a></p>
+                        <p>Connecticus</p>
+                        <p>Relación con el inversor</p>
+                        <p>Responsabilidad empresaria</p>
+                        <p>Sustentabilidad</p>
+                    </div>
+                </div>
+
+                <div class="columna-footer">
+                    <h2>Documentación del proyecto integrador</h2>
+                    <div>
+                        <p><a href="definiciones.html" title="Definiciones" class="columna-footer__a">Definiciones</a></p>
+                        <p><a href="memoria.html" title="Memoria" class="columna-footer__a">Memoria descriptiva | 1° etapa</a></p>
+                    </div>
+                </div>
+                <div class="columna-footer">
+                    <h2>Redes sociales</h2>
+                    <div>
+                        <ul class="columna-footer_encolumnado">
+                            <li class="columna-footer_encolumnado-fila">
+                                <a href="http://www.twitter.com/oleshito" target="_blank" class="no-decoration" title="Twitter">
+                                    <i class="fa fa-twitter columna-footer_encolumnado-fila_etiqueta"></i><span class="columna-footer_encolumnado-fila_entrada"> | Twitter</span>
+                                </a>
+                            </li>
+                            <li class="columna-footer_encolumnado-fila">
+                                <a href="http://www.facebook.com/apundyk" target="_blank" class="no-decoration" title="Facebook">
+                                    <i class="fa fa-facebook columna-footer_encolumnado-fila_etiqueta"></i><span class="columna-footer_encolumnado-fila_entrada"> | Facebook</span>
+                                </a>
+                            </li>
+                            <li class="columna-footer_encolumnado-fila">
+                                <a href="http://www.linkedin.com/in/apundyk" target="_blank" class="no-decoration" title="Linkedin">
+                                    <i class="fa fa-linkedin columna-footer_encolumnado-fila_etiqueta"></i><span class="columna-footer_encolumnado-fila_entrada"> | Linkedin</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="columna-footer">
+                    <h2>Recursos utilizados</h2>
+                    <div>
+                        <p><a href="https://fontawesome.com/" target="_blank" title="font awesome" class="columna-footer__a">Font Awesome</a></p>
+                        <p><a href="https://fonts.google.com/" target="_blank" title="Google fonts" class="columna-footer__a">Google Fonts</a></p>
+                        <p><a href="https://codepen.io/siiron/pen/QWwLoMy" target="_blank" title="Slider | Ronny Siikaluoma" class="columna-footer__a">Slider | Ronny Siikaluoma</a></p>
+                        <p><a href="https://www.w3schools.com/" target="_blank" title="W3 Schools" class="columna-footer__a">Toggle Tabs | W3 Schools</a></p>
+                        <p><a href="https://www.youtube.com/channel/UCfNzft_txAamoQvwh1j2HEQ" target="_blank" title="Going-To Internet" class="columna-footer__a">Testimonios | Going-To Internet</a></p>
+                        
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="footer-copy">
+
+            <h3>	&copy; Todos los derechos reservados | Alejandro Pundyk para <b>BOOTCAMP FULL STACK ENGINEER</b> en <a href="http://www.educacionit.com.ar"  target="_blank" Title="EducacionIt">EducaciónIt</a></h3>
+        </article>
+    </footer>
+    <!--    *********************************************** -->
+    <!--    Fin - Espacio común para el footer              -->
+    <!--    *********************************************** -->
+</body>
+</html>
