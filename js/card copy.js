@@ -13,16 +13,6 @@ function initInicio() {
         }
     }
     
-    // function sumarProductoDeseo(id, titulo){
-    //     elemSectionCart.innerHTML += `<div class="deseo__item">${titulo},${id}</div>`
-    //     console.log(`${titulo}, ${id}`)
-    //     }
-
-    // function sumarProductoCarrito(id, titulo){
-    // elemSectionCart.innerHTML += `<div class="cart__item">${titulo},${id}</div>`
-    // console.log(`${titulo},${id}`)
-    //     }
-
     function Card(id, imagen, titulo, descripcion, evaluacion, evaluadores, precioLista, precioDto, observacion01, observacion02, observacion03) {
         
         this.id = id
@@ -47,8 +37,8 @@ function initInicio() {
             newCard.addEventListener('click', function (ev) {
                 ev.preventDefault()
                 this.classList.toggle('card--selected')
-                // elemSectionCart.innerHTML += `<div class="cart__item">${that.titulo},${that.id}</div>`
-                // elemSectionDeseo.innerHTML += `<div class="cart__item">${that.titulo},${that.id}</div>`
+                //elemSectionCart.innerHTML += `<div class="cart__item">${that.titulo},${that.id}</div>`
+                //elemSectionDeseo.innerHTML += `<div class="cart__item">${that.titulo},${that.id}</div>`
             }) 
 
             // var compraProducto = document.querySelector ('.card__barra-producto__comprar')
@@ -65,10 +55,12 @@ function initInicio() {
 
                 newCard.innerHTML = 
                 `
-                    <article class="card__article" data-id=${this.id} data-titulo=${this.titulo}>
+                    <article class="card__article" data-id=${that.id} data-titulo=${that.titulo}>
+
                     <div class="card__image"
                             style="background-image: url('${this.imagen}')">
                     </div>
+
 <!-- -----------------------------------------  -->
                     <!-- Barra producto - visible en hover -->
                     <div class="card__barra-producto">
@@ -77,11 +69,11 @@ function initInicio() {
                             <i class="fa fa-info"></i>
                         </div>
                         <!-- Adicionar acción para sumar a lista de deseos -->
-                        <div class="card__barra-producto__deseos" onClick="sumarProductoDeseo(${this.id},'${this.titulo}')">
+                        <div class="card__barra-producto__deseos">
                             <i class="fa fa-heart"></i>
                         </div>
                         <!-- sumar al carrito -->
-                        <div class="card__barra-producto__comprar" onClick="sumarProductoCarrito(${this.id},'${this.titulo}')">
+                        <div class="card__barra-producto__comprar">
                             <i class="fa fa-cart-plus"></i>
                         </div>
                         
@@ -110,11 +102,37 @@ function initInicio() {
                 `
                 console.log(newCard)
             destinationElement.appendChild(newCard)
+
         }
     }
         
     
 
+async function cargarEventos(){
+    let arrayElementos = await getPost()
+    
+    var compraProducto = document.querySelector('.card__barra-producto__comprar')
+
+    
+    for (var elemCard of arrayElementos) {
+        console.log(compraProducto)
+        compraProducto.addEventListener('click', function (ev) {
+            // ev.preventDefault()
+            // let dataId = parseInt(ev.target.dataId)
+            // let dataTitle = parse(ev.target.dataTitle)
+            console.log('Hola ',parseInt(ev.target.dataset.dataId))
+            // elemSectionCart.innerHTML += `<div class="cart__item">${dataTitle},${dataId}</div>`
+        })
+        
+        var deseosProducto = document.querySelector ('.card__barra-producto__deseos')
+        deseosProducto.addEventListener('click', function (ev) {
+            ev.preventDefault()
+            let dataId = parseInt(ev.target.dataset.id)
+            let dataTitle = parseInt(ev.target.dataset.title)
+            elemSectionDeseo.innerHTML += `<div class="cart__item">${dataTitle},${dataId}</div>`
+        })
+    }
+}
 
     async function cargarProductos() {
         let arrayElementos = await getPost()
@@ -136,5 +154,5 @@ function initInicio() {
         }
     }
     cargarProductos()
-
+    cargarEventos()
 }

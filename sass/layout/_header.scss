@@ -15,12 +15,33 @@ Línea Bienvenida
 *********************************/
 .main-header__linea-bienvenida{
     box-sizing: border-box;
-    background-color: var(--clr-orange);
+    background-color: var(--clr-secondary);
     color: var(--clr-white);
     display: flex;
     justify-content: space-between;
     padding: 0.5em 1em;
     width: 100%;
+}
+
+
+.topRedesSociales, .main-header__linea-segundaMitad{
+    box-sizing: border-box;
+    background-color: var(--clr-secondary);
+    color: var(--clr-white);
+    display: flex;
+    justify-content: baseline;
+    // padding: 0;
+    // width: 100%;
+    margin-right: 1em;
+}
+
+.selectorColores #colores{
+    font-size: 0.9em;
+    border: none;
+    color: var(--clr-white);
+    background-color: var(--clr-secondary);
+    padding: 0 0.5em;
+    margin: 0;
 }
 
 /*********************************
@@ -48,12 +69,12 @@ NAV BAR
             text-align: center;
             
             &-active{
-                background-color: var(--clr-blue);
+                background-color: var(--clr-primary);
                 color: var(--clr-white);
             }
             
             &:hover {
-                background-color: var(--clr-orange);
+                background-color: var(--clr-secondary);
                 color: var(--clr-white);
             }
         }
@@ -75,7 +96,7 @@ SEARCH BAR
 
     &__logo-container {
         display: block;
-        background-image: url(../../img/Connecticus_01_h35w270.png);
+        background-image: url(../img/Connecticus_01_h35w270.png);
         background-position-x: center;
         background-position-y: center;
         background-repeat: no-repeat;
@@ -98,6 +119,12 @@ SEARCH BAR
         display: block;
         margin: 0 auto;
     }    
+
+    &__deseo-container {
+        display: block;
+        margin: 0 auto;
+    }    
+
     &__user-container {
         display: block;
         margin: 0 auto;
@@ -114,7 +141,7 @@ SEARCH BAR
     float: right;
     padding: 0.2em 1em !important;
     border: none;
-    border-bottom: 2px solid var(--clr-orange);
+    border-bottom: 2px solid var(--clr-secondary);
     margin-right: 1em;
     font-size: .9em;
     color: var(--clr-dark-gray);
@@ -128,10 +155,11 @@ SEARCH BAR
     font-size: 1.1em;
     border: none;
     cursor: pointer;
-    color: var(--clr-orange);
+    color: var(--clr-secondary);
 }
 
 .search-bar__carrito-container button,
+.search-bar__deseo-container button,
 .search-bar__user-container button, 
 .search-bar__burger-container{
     //float: right;
@@ -141,7 +169,7 @@ SEARCH BAR
     // margin-right: 8px;
     font-size: 1.2em;
     cursor: pointer;
-    color:var(--clr-orange);
+    color:var(--clr-secondary);
 }
 .nav-bar_botones{
     display: flex;
@@ -162,7 +190,7 @@ SEARCH BAR
     // Modifico el logo por la versión corta
     .search-bar__logo-container {
         // display: inline-flex;
-        background-image: url(../../img/NN_02_h35w42.png);
+        background-image: url(../img/NN_02_h35w42.png);
         background-repeat: no-repeat;
         width: 100px;
     }    

@@ -21,22 +21,31 @@
 <header class="main-header">
     
     <div class="main-header__linea-bienvenida">
-        <p> <u>Promo primera compra</u> | <em>Código: <b>MiCompra15%</b></em></p>
-        <div class="topRedesSociales">
-            <p>Redes Sociales: 
-                <a href="http://www.facebook.com/apundyk" target="_blank" class="no-decoration" title="En general sumo solo a familia y amigos, sos bienvenido!">
-                    <i class="fa fa-facebook" style="padding: 3px;"></i> 
-                </a>
-                <a href="http://www.instagram.com/apundyk" target="_blank" class="no-decoration" title="No lo uso mucho, pero nunca se sabe">
-                    <i class="fa fa-instagram" style="padding: 3px;"></i> 
-                </a>
-                <a href="http://www.linkedin.com/in/apundyk" target="_blank" class="no-decoration" title="Contactame por Linkedin">
-                    <i class="fa fa-linkedin" style="padding: 3px;"></i>
-                </a>    
-                <a  href="https://api.whatsapp.com/send?phone=5491158325218&text=Hola%20Quiero%20hacerles%20una%20consulta" target="_blank" class="no-decoration" title="Consultas por Whatsapp">
-                    <i class="fa fa-whatsapp" style="padding: 3px;"></i>
-                </a>    
-            </p>
+        <p class="mensajeVariable"> <u>Promo primera compra</u> | <em>Código: <b>MiCompra15%</b></em></p>
+        <div class="main-header__linea-segundaMitad">
+            <div class="topRedesSociales">
+                <p>Redes Sociales: 
+                    <a href="http://www.facebook.com/apundyk" target="_blank" class="no-decoration" title="En general sumo solo a familia y amigos, sos bienvenido!">
+                        <i class="fa fa-facebook" style="padding: 3px;"></i> 
+                    </a>
+                    <a href="http://www.instagram.com/apundyk" target="_blank" class="no-decoration" title="No lo uso mucho, pero nunca se sabe">
+                        <i class="fa fa-instagram" style="padding: 3px;"></i> 
+                    </a>
+                    <a href="http://www.linkedin.com/in/apundyk" target="_blank" class="no-decoration" title="Contactame por Linkedin">
+                        <i class="fa fa-linkedin" style="padding: 3px;"></i>
+                    </a>    
+                    <a  href="https://api.whatsapp.com/send?phone=5491158325218&text=Hola%20Quiero%20hacerles%20una%20consulta" target="_blank" class="no-decoration" title="Consultas por Whatsapp">
+                        <i class="fa fa-whatsapp" style="padding: 3px;"></i>
+                    </a>    
+                    <form class="selectorColores">
+                        <select name = "colores" id="colores" onchange="cargarColor()">
+                            <option value = "combo1">Colores-01</option>
+                            <option value = "combo2">Colores-02</option>
+                            <option value = "combo3">Colores-03</option>
+                        </select>
+                    </form>
+                </p>
+            </div>
         </div>
     </div>
     
@@ -66,7 +75,12 @@
 
             <form action="#" class="search-bar__carrito-container">
                 <div>
-                    <button type="submit" style="font-size: 1.3em;" class="search-bar__carrito-container"><i class="fa fa-cart-plus"></i></button>
+                    <button type="submit" style="font-size: 1.3em;" class="search-bar__carrito-container"><i class="fa fa-shopping-cart"></i></button>
+                </div>
+            </form>
+            <form action="#" class="search-bar__deseo-container">
+                <div>
+                    <button type="submit" style="font-size: 1.3em;" class="search-bar__deseo-container"><i class="fa fa-heart"></i></button>
                 </div>
             </form>
             <form action="#" class="search-bar__user-container">
@@ -103,6 +117,7 @@
                 </li>
             </ul>
             <section class="section-cart"></section>
+            <section class="section-deseo"></section>
         </nav>
         
         <script>
@@ -124,6 +139,16 @@
         <!-- <script src="js/main.js"></script> -->
     </header>
 
+
+<script>
+    function sumarProductoDeseo(id, titulo){
+        elemSectionDeseo.innerHTML += `<div class="deseo__item">${titulo},${id}</div>`
+    }
+
+    function sumarProductoCarrito(id, titulo){
+        elemSectionCart.innerHTML += `<div class="cart__item">${titulo},${id}</div>`
+    }
+</script>
 
     <!-- ------------------------------------------------------------- -->
     <!--                          Bloque Main                          -->
@@ -244,7 +269,10 @@
         <script src="js/contacto.js"></script>
         <script src="js/nosotros.js"></script>
         <script src="js/cart.js"></script>
+        <script src="js/deseo.js"></script>
         <script src="js/card.js"></script>
         <script src="js/elemInitIndex.js"></script>
+        <script src="js/selColores.js"></script>
+
 </body>
 </html>

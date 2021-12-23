@@ -9,3 +9,13 @@
 body {
     box-sizing: border-box;
 }
+
+*:focus{
+    outline: none;
+}
+
+select {
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}

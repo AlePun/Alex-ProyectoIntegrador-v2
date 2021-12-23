@@ -110,7 +110,7 @@
         border: none;
         padding: 0.5em;
         margin-right: 1em;
-        color: var(--clr-blue);
+        color: var(--clr-primary);
     }
     
     & button{
@@ -118,11 +118,11 @@
         align-self: center;
         border: none;
         border-radius: 15px;
-        color: var(--clr-blue);
+        color: var(--clr-primary);
     }
 
         & button:hover{
-        background-color: var(--clr-blue);
+        background-color: var(--clr-primary);
         color: var(--clr-white);
     }
 }

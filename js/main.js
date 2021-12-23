@@ -1,5 +1,3 @@
-
-
 function start() {
 
     function ajax(url, metodo) {
@@ -90,23 +88,3 @@ function start() {
 }
 
 start()
-
-// function preview_01() {frame_01.src=URL.createObjectURL(event.target.files[0]);}
-// function preview_02() {frame_02.src=URL.createObjectURL(event.target.files[0]);}
-// function preview_03() {frame_03.src=URL.createObjectURL(event.target.files[0]);}
-
-
-// var elemMarcoCarousel = document.getElementsByClassName('marco-carousel')[0]
-
-
-// var elemMarcoBeneficios = document.getElementsByClassName('marco-beneficios')[0]
-
-
-// var elemSectionCards = document.getElementsByClassName('section-cards')[0]
-
-
-// var elemTestimonials = document.getElementsByClassName('testimonials')[0]
-
-
-
-

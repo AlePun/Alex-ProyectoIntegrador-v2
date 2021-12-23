@@ -120,15 +120,15 @@ NAV BAR
             border-top-right-radius: 8px;
             &-active,
             .tab button.active {
-                // border-bottom: 3px solid  var(--clr-blue);
-                // border-bottom: 1px solid var(--clr-blue);
-                color: var(--clr-blue);
+                // border-bottom: 3px solid  var(--clr-primary);
+                // border-bottom: 1px solid var(--clr-primary);
+                color: var(--clr-primary);
                 text-decoration: underline;
             }
             &:hover {
-                // border-bottom: 1px solid var(--clr-orange);
+                // border-bottom: 1px solid var(--clr-secondary);
                 text-decoration: underline;
-                color: var(--clr-orange);
+                color: var(--clr-secondary);
             }
         }
     }    

@@ -22,7 +22,7 @@
 // Styling
 
 .marco-carousel {
-    background: var(--clr-orange);
+    background: var(--clr-secondary);
     padding: 50px ;
     
 }
@@ -35,9 +35,9 @@
 }
 
 .container h1{
-    color: var(--clr-orange);
+    color: var(--clr-secondary);
     font-size: 2.5em;
-    border-bottom: 1px solid var(--clr-orange);
+    border-bottom: 1px solid var(--clr-secondary);
 }
 
 .carousel-button{
@@ -45,15 +45,15 @@
     height: 3em;
     font: verdana 1em bold var(--clr-white);
     border-radius: 1em;
-    border-color: var(--clr-orange);
-    background-color: var(--clr-orange);
+    border-color: var(--clr-secondary);
+    background-color: var(--clr-secondary);
     color: var(--clr-white);
     margin-top: 2em;
 
     &:hover{
         
-        border-color: var(--clr-blue);
-        background-color: var(--clr-blue);
+        border-color: var(--clr-primary);
+        background-color: var(--clr-primary);
     }
 }
 
