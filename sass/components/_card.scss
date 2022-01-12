@@ -83,19 +83,20 @@
             color: var(--clr-dark-gray);
             padding:.3em;
             font-size: 0.8em;
-            &::after{
-                content:" c/u."
-            }
+            // &::after{
+            //     content:" c/u."
+            // }
         }
         &-disc{
             color: var(--clr-white);
-            background-color: var(--clr-red);
-            padding:.2em;
-            font-size: 1em;
-            font-weight: bold;
-            &::after{
-                content:" c/u."
-            }
+            // background-color: var(--clr-red);
+            border: 1px solid white;
+            padding:0.2em .5em;
+            font-size: 0.8em;
+            font-weight: 500;
+            // &::after{
+            //     content:" c/u."
+            // }
         }
     }
     

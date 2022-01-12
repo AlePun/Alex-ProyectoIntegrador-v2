@@ -5,48 +5,53 @@
 // 3) Marcar el combo como selected en el elegido
 // ----------------------------------------------------------------------------------
 
-function cambioColor(){
-    //console.log(elemColorSeleccionado)
+function cambioColor(nuevoColor){
 
-    if (document.getElementById('colores').value == 'combo1') {
+    if (nuevoColor == 'combo1') {
         localStorage.setItem('panelTheme', 'combo1')
-        // console.log('Grabé en el local storage, ',localStorage.getItem('panelTheme'))
+        
         $(':root').css('--clr-primary', 'var(--clr-blue)')
         $(':root').css('--clr-secondary', 'var(--clr-orange)')
     }
-    if (document.getElementById('colores').value == 'combo2') {
+    if (nuevoColor == 'combo2') {
         localStorage.setItem('panelTheme',  'combo2')
-        // console.log('Grabé en el local storage, ',localStorage.getItem('panelTheme') )
+        
         $(':root').css('--clr-primary', 'var(--clr-black)')
         $(':root').css('--clr-secondary', 'var(--clr-lightOrange)')
     }
-    if (document.getElementById('colores').value == 'combo3') {
+    if (nuevoColor == 'combo3') {
         localStorage.setItem('panelTheme', 'combo3')
-        // console.log('Grabé en el local storage, ',localStorage.getItem('panelTheme') )
+
         $(':root').css('--clr-primary', 'var(--clr-green)')
         $(':root').css('--clr-secondary', 'var(--clr-red)')
     }
 }
 
-function cargarColor() {
-    var localStr = localStorage.getItem('panelTheme')
-    if (localStr == '') {
-        // console.log('El local está vacío')
+function cargarColor(cboSeleccionado) {
+    
+    if (cboSeleccionado == null) {
+        localStorage.setItem('panelTheme', 'combo1')
+        cambioColor(localStorage.getItem('combo1'))
+        
     } else {
-        cambioColor(localStorage.getItem('panelTheme'))
-        // console.log('El local storage tiene: ',localStr)
-        // $('#current-theme').text(localStorage.getItem('panelTheme'))
+        cambioColor(cboSeleccionado)
     }
 }
 
-var elemColorSeleccionado = document.getElementById('colores').value
+var elemColorSeleccionado
+
+if  ( localStorage.getItem('panelTheme') == null) 
+{   elemColorSeleccionado = document.getElementById('colores').value
+} else {
+    elemColorSeleccionado = localStorage.getItem('panelTheme')
+    document.getElementById('colores').value = localStorage.getItem('panelTheme')
+}
+
+cargarColor(elemColorSeleccionado)
+
 var colColores = document.getElementById('colores')
 
-cargarColor()
-
 colColores.addEventListener('change', e => {
-    // console.log('Cambio en el combo, la selección es ', document.getElementById('colores').value)
     e.preventDefault()
-    cargarColor()
-    // console.log('El local storage tiene: ',localStorage.getItem('panelTheme'))
+    cargarColor(document.getElementById('colores').value)
 })

@@ -1,0 +1,245 @@
+.listaDeDeseos{
+    display: flex;
+    justify-content:space-between;
+}
+
+.lineaFormulario{
+    margin: 0 2em;
+    padding: 5px;
+    display: inline-block;
+    justify-content:left;
+
+    input{
+        width: 100%;
+        border: none;
+        margin: 0.2em 0;
+        padding: 0.5em 0.2em;
+    }
+    textarea{
+        width: 100%;
+        border: none;
+        margin: 0.2em 0;
+        padding: 0.5em 0.2em;
+        height: 6em;
+        resize: vertical;
+    }
+}
+
+.formularioDeseos{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.section-deseo {
+    padding: 5px;
+    user-select: none;
+    overflow-y: auto;
+    display: none;
+    position: fixed;
+    background-color: #faf0f0;
+    z-index: 2;
+    top: 50px;
+    left: 50px;
+    right: 50px;
+    bottom: 50px;
+    box-shadow: .3em .3em 10em .3em rgba(0, 0, 0, 1);
+    &--visible {
+        display: block;
+    }
+
+    h3{
+        font-size: 1.5em;
+        margin: 0.7em;
+        color: var(--clr-primary);
+    }
+
+    h2, p{    
+        font-size: 1.20em;
+        color: var(--clr-primary);
+        width: 90%;
+        margin: 0.5em auto;
+    }
+
+    .btnCierre{
+        padding: 0.1em 0.3em;
+        border: 1px solid var(--clr-primary);
+        &:hover{
+        color: var(--clr-secondary);
+        }
+    }
+
+    .restar{
+        color: rgb(126, 55, 55);
+        cursor: pointer;
+    }
+
+    .sumar{
+        color: rgb(55, 128, 55);
+        cursor: pointer;
+    }
+
+    table {
+        width: 90%;
+        margin: 0.5em auto;
+    }
+
+    table,th,td {
+        // border: 1px solid black;
+        border-collapse: collapse;
+        padding: 0.5em;
+    }
+    tr:nth-of-type(even) {
+        background-color: rgba(180, 180, 180, 0.5);
+    }
+
+    .importes {
+        text-align: right;
+        margin-right: 1.5em;
+    }
+    
+
+    .cantidad{
+        text-align: center;
+        font-size: 1.1em;
+        font-weight: bold;
+        color: #333;
+    }
+    
+    table button {
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        width: 80px;
+        height: 1.8em;
+        font-size: 1.0em;
+        font-weight: bold;
+        margin-bottom: 0.5em;
+    }
+    .botonDerecha{
+        display: flex;
+        justify-content: flex-end;
+        width: 94%;
+    }
+
+    button.btn__enviarDeseo {
+        //float: right;
+        margin: 15px;
+        max-width: 200px;
+        height: 35px;
+        font-size: 1em;
+        font-weight: bold;
+        align-content: center;
+        padding: 0 15px;
+    }
+    button.btn__enviarDeseo:hover {
+        color: red;
+        cursor: pointer;
+    }
+
+    .cabecera-deseo{
+        display: flex;
+        justify-content:space-between;
+    }
+    .deseo_espacio{
+        margin_bottom: 3em;
+    }
+
+    .DetalleSubtotal{
+        margin: 0 auto;
+        width: 95%;
+    }
+}
+
+.medioBloqueDeseo{
+    padding: 0.5em;
+    max-width: 50%;
+}
+
+
+
+.detalleDeseos{ 
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: #fff;
+    align-items: center;
+    // border-bottom: 1px dashed #ccc;
+    width: 95%;
+    margin: 1em auto;
+    padding:0.5em;
+
+}
+
+.detalleDeseos_imagen {
+    margin: 0.3em;
+    border: 1px solid #ccc;
+    padding: 0.1em;
+}
+.imagenDeseo{
+    display:block;
+    margin: 0 auto;
+    width: 120px;
+}
+
+.detalleDeseos_contenido {
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0.3em;
+    padding: 0.3 em;
+}
+.detalleDeseos_contenido-titulo {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9em;
+}
+.detalleDeseos_contenido-descripcion {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.7em;
+}
+
+.detalleDeseos_contenido-pu {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9em;
+}
+
+.detalleDeseos_variables{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 120px;
+    text-align: center;
+}
+
+.detalleDeseos_variables-titulo {
+    border-bottom: 1px solid rgba(136, 132, 132, 0.5);
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+.detalleDeseos_variables-cantidad{
+    text-align: center;
+}
+.detalleDeseos_contenido-st {
+    border-top: 1px solid rgba(136, 132, 132, 0.5);
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-align: center;
+    
+}
+.acciones{
+    //display: block;
+    text-align: center;
+    font-size: 1.3em;
+    color: #333;
+    margin: 0 0.9em;
+}
+
+.acciones:hover {
+    color: rgb(116, 28, 28);
+//     font-size: 1.7em;
+    cursor: pointer;
+}

@@ -39,9 +39,9 @@
                     </a>    
                     <form class="selectorColores">
                         <select name = "colores" id="colores" onchange="cargarColor()">
-                            <option value = "combo1">Colores-01</option>
-                            <option value = "combo2">Colores-02</option>
-                            <option value = "combo3">Colores-03</option>
+                            <option id= "combo1" value = "combo1" >Colores de Marca</option>
+                            <option id= "combo2" value = "combo2" >Joya, nunca Taxi!</option>
+                            <option id= "combo3" value = "combo3" >Colores Navidad</option>
                         </select>
                     </form>
                 </p>
@@ -52,7 +52,7 @@
     <div class="search-bar">
             <!-- Logo con lik a index.html -->
             <span class="search-bar_logo">
-                <a href="index.html" class="search-bar__logo-container"></a>
+                <a href="/#inicio" class="search-bar__logo-container"></a>
             </span>
             <!-- Formulario de búsqueda, con combo tipoProducto -->
             <form class="search-bar__form-container">
@@ -75,17 +75,17 @@
 
             <form action="#" class="search-bar__carrito-container">
                 <div>
-                    <button type="submit" style="font-size: 1.3em;" class="search-bar__carrito-container"><i class="fa fa-shopping-cart"></i></button>
+                    <button id= "carrito" type="submit" style="font-size: 1.3em;" class="search-bar__carrito-container"><i class="fa fa-shopping-cart"></i></button>
                 </div>
             </form>
             <form action="#" class="search-bar__deseo-container">
                 <div>
-                    <button type="submit" style="font-size: 1.3em;" class="search-bar__deseo-container"><i class="fa fa-heart"></i></button>
+                    <button id= "deseo" type="submit" style="font-size: 1.3em;" class="search-bar__deseo-container"><i class="fa fa-heart"></i></button>
                 </div>
             </form>
             <form action="#" class="search-bar__user-container">
-                <div class="search-bar__user-selector">
-                    <button type="submit" style="font-size: 1.3em;" ><i class="fa fa-user"></i></button>
+                <div>
+                    <button id= "usuario" type="submit" style="font-size: 1.3em;"  class="search-bar__user-container"><i class="fa fa-user"></i></button>
                 </div>
             </form>
             
@@ -116,8 +116,9 @@
                     <a class="nav-bar__nav-link" id="nosotros">Nosotros</a>
                 </li>
             </ul>
-            <section class="section-cart"></section>
-            <section class="section-deseo"></section>
+            <section id= "section-carrito" class="section-carrito"></section>
+            <section id= "section-deseo" class="section-deseo"></section>
+            <section class="section-detalleProducto"></section>
         </nav>
         
         <script>
@@ -138,17 +139,6 @@
         </script>
         <!-- <script src="js/main.js"></script> -->
     </header>
-
-
-<script>
-    function sumarProductoDeseo(id, titulo){
-        elemSectionDeseo.innerHTML += `<div class="deseo__item">${titulo},${id}</div>`
-    }
-
-    function sumarProductoCarrito(id, titulo){
-        elemSectionCart.innerHTML += `<div class="cart__item">${titulo},${id}</div>`
-    }
-</script>
 
     <!-- ------------------------------------------------------------- -->
     <!--                          Bloque Main                          -->
@@ -209,8 +199,8 @@
                 <div class="columna-footer">
                     <h2>Documentación</h2>
                     <div>
-                        <p><a href="definiciones.html" title="Definiciones" class="columna-footer__a">Definiciones</a></p>
-                        <p><a href="memoria.html" title="Memoria" class="columna-footer__a">Memoria descriptiva | 1° etapa</a></p>
+                        <p><a href="extras/definiciones.html" title="Definiciones" class="columna-footer__a">Definiciones</a></p>
+                        <p><a href="extras/memoria.html" title="Memoria" class="columna-footer__a">Memoria descriptiva | 1° etapa</a></p>
                     </div>
                 </div>
                 <div class="columna-footer">
@@ -264,6 +254,53 @@
     <!--    *********************************************** -->
     <!--    Scripts completos para index                    -->
     <!--    *********************************************** -->
+
+
+
+    <!-- Código de librerías -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
+
+    <!-- clientes http -->
+    <script src="js/clientes/http.client.js"></script>
+
+    <!-- servicios -->
+    <script src="js/servicios/producto.js"></script>
+    <script src="js/servicios/carrito.js"></script>
+    <script src="js/servicios/deseo.js"></script>
+
+    <!-- modelos -->
+    <script src="js/modelos/producto.js"></script>
+    <script src="js/modelos/carrito.js"></script>
+    <script src="js/modelos/deseo.js"></script>
+
+    <!-- controladores -->
+    <script src="js/controladores/productos.js"></script>
+    <script src="js/controladores/carrito.js"></script>
+    <script src="js/controladores/deseo.js"></script>
+
+    <!-- menúes -->
+    <script src="js/menu/alta.js"></script>
+    <script src="js/menu/nosotros.js"></script>
+    <script src="js/menu/contacto.js"></script>
+    <script src="js/menu/hbs_helpers.js"></script>  
+    <script src="js/menu/carrito.js"></script>
+    <script src="js/menu/deseo.js"></script>
+    <script src="js/menu/inicio.js"></script>  
+
+    <!-- Código de arranque -->
+    <script src="js/main.js"></script>
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
         <script src="js/main.js"></script>
         <script src="js/alta.js"></script>
         <script src="js/contacto.js"></script>
@@ -271,7 +308,7 @@
         <script src="js/cart.js"></script>
         <script src="js/deseo.js"></script>
         <script src="js/card.js"></script>
-        <script src="js/elemInitIndex.js"></script>
+        <script src="js/elemInitIndex.js"></script> -->
         <script src="js/selColores.js"></script>
 
 </body>

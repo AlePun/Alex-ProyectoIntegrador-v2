@@ -1,90 +1,90 @@
-function start() {
-
-    function ajax(url, metodo) {
-        let xhr = new XMLHttpRequest
-        xhr.open(metodo || 'get', url)      // con short circuit operator
-        xhr.send()
-
-        return xhr
+class Main {
+    async ajax(url, metodo='get') {    // argumentos con valores por default
+        return await fetch(url, { method: metodo }).then(r => r.text())
     }
 
-    function getNombreArchivo(id) {
+    getNombreArchivo(id) {
         return 'views/' + id + '.html'
     }
 
-    function marcarLink(id) {
+    marcarLink(id) {
         let links = document.querySelectorAll('header nav a')
-        links.forEach(link => {
-            if(link.id == id) link.classList.add('nav-bar__nav-link-active')
-            else link.classList.remove('nav-bar__nav-link-active')
-        })
-    }
-
-    function initJS(id) {
-        if(id == 'inicio') {
-            initInicio()
-            initElemIndex()
-        }
-        else if(id == 'alta') {
-            initAlta()
-        }
-        else if(id == 'contacto') {
-            initContacto()
-        }
-        else if(id == 'nosotros') {
-            initNosotros()
-        }                
-    }
-
-    function cargarPlantilla(id) {
-        let archivo = getNombreArchivo(id)
-        let xhr = ajax(archivo)
-        xhr.addEventListener('load', () => {
-            if (xhr.status == 200) {
-                let plantilla = xhr.response
-                // console.log('paso por aca -- borrar')
-                /* Cargo la plantilla HTML en la vista, por debajo de la navegación */
-                document.querySelector('main').innerHTML = plantilla
-
-                /* Cargo el script JS que va a manejar la funcionalidad de la plantilla inyectada */
-                initJS(id)
+        
+        links.forEach( link => {
+            link.classList.remove('nav-bar__nav-link-active')
+            if (link.id == id) {
+                link.classList.add('nav-bar__nav-link-active')
+            } else {
+                link.classList.remove('nav-bar__nav-link-active')
             }
         })
     }
 
-    function cargarPlantillas() {
-        let links = document.querySelectorAll('header nav a')
+    initJS(id) {
+        if(id == 'alta') {
+            initAlta()
+        }
+        else if(id == 'inicio') {
+            initInicio()
+        }
+        else if(id == 'nosotros') {
+            initNosotros()
+        }
+        else if(id == 'contacto') {
+            initContacto()
+        }
+        else if(id == 'usuario') {
+            initUsuario()
+        }
 
-        /* ----------------------------------------------------------------- */
-        /*                     Carga de la vista inicial                     */
-        /* ----------------------------------------------------------------- */
+    }
+
+    async cargarPlantilla(id) {
+        let archivo = this.getNombreArchivo(id)
+
+        let plantilla = await this.ajax(archivo)
+        // Carga del código de vista (HTML) de la plantilla
+        let main = document.querySelector('main')
+        main.innerHTML = plantilla
+
+        // Carga del código script (JS) de la plantilla
+        this.initJS(id)
+    }
+
+    async cargarPlantillas() {
+        /* --------------------------------------------------------- */
+        /* Carga inicial de la vista determinada por la url visitada */
+        /* --------------------------------------------------------- */
         let id = location.hash.slice(1) || 'inicio'
-        marcarLink(id)
-        cargarPlantilla(id)
-        //console.log('Carga inicial')
+        //console.log(location.hash.slice(1))
+        this.marcarLink(id)
+        await this.cargarPlantilla(id)
 
-        /* ----------------------------------------------------------------------- */
-        /*         Carga de la vistas dinámicas por parte de la navegación         */
-        /* ----------------------------------------------------------------------- */
+        /* ------------------------------------------------------------- */
+        /* Carga de cada uno de los contenidos según la navegación local */
+        /* ------------------------------------------------------------- */
+        let links = document.querySelectorAll('header nav a')
+        let btnUsuario = document.querySelector('usuario')
+
         links.forEach(link => {
             link.addEventListener('click', e => {
                 e.preventDefault()
-
                 let id = link.id
-                //console.log(id)
                 location.hash = id
             })
         })
 
-        window.addEventListener('hashchange', () => {
-            //console.log('Cambió la URL')
+        window.addEventListener('hashchange', async () => {
             let id = location.hash.slice(1) || 'inicio'
-            marcarLink(id)
-            cargarPlantilla(id)
+            this.marcarLink(id)
+            await this.cargarPlantilla(id)
         })
     }
-
-    cargarPlantillas()
+        
+    async start() {
+        await this.cargarPlantillas()
+    }
 }
 
-start()
+const main = new Main()
+main.start()

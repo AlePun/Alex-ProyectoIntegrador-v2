@@ -1,0 +1,128 @@
+[
+    {
+    "id": 4,
+    "imagen": "img/productos/notebook-lenovo.jpg",	
+    "titulo": "Notebook Lenovo-4579",
+    "descripcionLarga": "Veritatis, quis qui. Vero odio placeat aperiam explicabo voluptatum doloremque veritatis maiores error ab quisquam mollitia exercitationem et, nam consequuntur quia aut non ad sunt quaerat doloribus. Ab nam recusandae, consectetur error delectus harum sunt officiis blanditiis quam. Dolorum quos voluptatem, velit consequuntur suscipit rem quas temporibus repudiandae voluptatibus repellat aliquid facilis blanditiis sunt ex neque, aperiam possimus optio magnam quia tempora ut voluptatum consectetur vero quidem. Delectus sed itaque facere tempora reiciendis, obcaecati magni distinctio hic perferendis magnam aspernatur, voluptatibus soluta modi vel eveniet ut nisi fugiat. Saepe blanditiis facere modi accusamus sed vitae culpa id quo temporibus ratione!",
+    "evaluacion": 3,	
+    "evaluadores": 7,
+    "precioLista": 75320,
+    "precioDto": 65320,
+    "observacion01": "32GB",
+    "observacion02": "15.6",		
+    "observacion03":"i7"
+    },
+    {
+        "id": 5,
+    "imagen": "img/productos/apple-iphone-11-pro-max.jpg",		
+    "titulo": "iphone 11 pro max",
+    "descripcionLarga": "Debitis distinctio, dignissimos corrupti nobis facilis asperiores nisi hic, fugit accusantium dolorum doloremque consequatur explicabo ipsum nam atque suscipit nihil recusandae cupiditate delectus, voluptas vitae. Repudiandae asperiores voluptas excepturi non, repellendus reiciendis amet cumque commodi sequi, cupiditate sit perferendis! Obcaecati, magnam odio officiis debitis, temporibus itaque corrupti ea provident accusantium tempora alias! Doloribus neque mollitia qui, suscipit accusamus fugit consequatur magni praesentium ut vel voluptas. Eligendi, culpa iusto repellendus voluptas, error voluptatum non voluptatem illum excepturi deserunt repudiandae nihil natus asperiores, ipsam nam ipsa velit. Et illo cum sapiente excepturi aut modi omnis beatae possimus, obcaecati nulla! Accusantium, similique adipisci.",
+    "evaluacion": 4,
+    "evaluadores": 14,
+    "precioLista": 75320,
+    "precioDto":	65320,
+    "observacion01": "5G",
+    "observacion02": "Wi-Fi",
+    "observacion03": "Apple"
+    },
+    {
+    "imagen": "img/productos/auriculares-sony.jpg",
+    "titulo": "Sony WH-CH510",
+    "descripcionLarga": "Expedita beatae impedit iste incidunt debitis sapiente eum tenetur dignissimos! Incidunt fuga consequuntur tenetur! Deserunt corrupti debitis adipisci, quam autem quibusdam explicabo vero expedita, molestias perferendis iusto hic nihil beatae quidem ad earum provident eveniet dignissimos itaque sapiente. Hic quidem veniam in harum blanditiis, esse fuga alias suscipit enim itaque, quod inventore! Necessitatibus optio nemo sint quas magni cumque explicabo excepturi, deleniti nihil numquam corporis sequi vero repudiandae et voluptatem alias quod quaerat sit aliquam aspernatur eveniet neque doloremque ratione. Dolore quae temporibus inventore nobis odio iure modi quas natus expedita veritatis aliquid vel facere omnis fugiat corrupti, suscipit dolorem!",
+    "evaluacion": 5	,
+    "evaluadores":	300,
+    "precioLista":	9500,
+    "precioDto":	5700,
+    "observacion01": "Wi-Fi",
+    "observacion02": "Stereo",
+    "observacion03": "35 hrs"
+    },
+    {
+    "imagen": "img/productos/google-nest-mini.jpg",
+    "titulo": "Google Nest Mini",
+    "descripcionLarga": "Excepturi possimus odio nemo quos quisquam, facilis autem laudantium incidunt, id animi quae reprehenderit dolor veritatis voluptates facere quibusdam dicta perspiciatis error! Ducimus, optio neque! Illo alias consectetur quidem ipsum corporis, suscipit vitae, possimus voluptatum consequatur odio est aliquid beatae corrupti expedita optio inventore quae nulla. Aspernatur placeat inventore enim doloremque cupiditate ipsam eveniet quia, illo, nesciunt nulla ipsa. Debitis quidem quae, magnam harum optio quaerat alias ut dolorem, hic esse maxime rerum in possimus corporis ipsa id a vel? Provident facilis ad suscipit aperiam voluptate pariatur labore laboriosam eos, perspiciatis nemo adipisci obcaecati odit excepturi quisquam id praesentium molestiae.",
+    "evaluacion": 1,
+    "evaluadores": 90,
+    "precioLista": 3320,
+    "precioDto": 2850,
+    "observacion01": "8GB",
+    "observacion02": "Bluetooth"
+    },
+    {
+    "imagen": "img/productos/samsung-galaxy-s21-plus-5g.jpg",
+    "titulo": "Galaxy | S21+",
+    "descripcionLarga": "Dolore eum eos nisi blanditiis culpa voluptatum delectus ab possimus ipsa assumenda debitis quidem excepturi ex, aut, deleniti eius nobis. Unde incidunt id magni temporibus in nemo nulla, recusandae dicta voluptas optio saepe quam aut adipisci sint fuga possimus distinctio aliquam quisquam veniam officia? Impedit, unde nemo ex dicta aperiam nulla nobis in totam, nisi ratione facere dignissimos ad debitis sit. Vero deleniti mollitia animi, rem voluptatibus, sapiente facilis ea voluptas sit a voluptates placeat natus veniam. Eveniet labore consequatur temporibus esse iste at qui deserunt numquam officiis cumque quaerat aliquam, eius necessitatibus debitis ipsa voluptates vero facere, quos maiores.",
+    "evaluacion": 5,
+    "evaluadores": 27,
+    "precioLista": 50000,
+    "precioDto": 49990,
+    "observacion01": "PPP",
+    "observacion02": "5G",
+    "observacion03": "32GB"
+    },
+    {
+    "imagen": "img/productos/drone-dji.jpg",
+    "titulo": "Dji Maverick",
+    "descripcionLarga": "Fugit dicta atque quasi quam corrupti quidem error blanditiis ipsam, et adipisci, nihil dolorem consequuntur nam pariatur enim id explicabo voluptatum eveniet a totam alias iure placeat repellendus. Inventore quaerat accusantium deleniti id iure placeat, impedit debitis ex odit quibusdam voluptas laborum eveniet. Mollitia sunt est soluta eveniet dicta a maxime explicabo repudiandae provident perspiciatis! Neque repellendus hic nam nulla, libero maiores in mollitia quasi molestias quisquam ad. Aut ipsam ipsum aliquid obcaecati molestias autem, unde consequatur dignissimos sequi esse vero ex? Delectus fuga facilis sit velit ea accusantium labore cum officia et. Est eius obcaecati laborum quod, voluptatibus dicta!",
+    "evaluacion": 4,
+    "evaluadores": 3,
+    "precioLista": 120000,
+    "precioDto": 99990,
+    "observacion01": "32Mpx",
+    "observacion02": "3hrs",
+    "observacion03": "Return"
+    },
+    {
+    "imagen": "img/productos/notebook-lenovo.jpg",
+    "titulo": "Notebook HP-4579",
+    "descripcionLarga": "Quibusdam cumque laborum ab aspernatur corporis ullam omnis dolorem repudiandae veniam unde dolore laboriosam, sit vero hic numquam ratione ducimus voluptas tempore recusandae. Odio, iure dolores sequi repellendus atque delectus! Dolore molestias dolor natus eius labore quis impedit id, sint ipsa ea voluptatum laudantium soluta corporis eaque quasi neque aliquid dicta tempora. Repudiandae magni dolore cumque illo ipsam, fuga provident ullam dicta nam culpa itaque vel minus deserunt excepturi, ex voluptatem. Fugit, debitis officia consequuntur veniam praesentium sapiente soluta architecto quidem eveniet fuga, a nihil nemo odio quibusdam ullam cumque. Accusamus excepturi odit dolorem qui quasi dicta consequatur, numquam quibusdam.",
+    "evaluacion": 5,
+    "evaluadores": 7,
+    "precioLista": 75320,
+    "precioDto": 65320,
+    "observacion01": "32GB",
+    "observacion02": "15.6",
+    "observacion03": "i7"
+    },
+    {
+    "imagen": "img/productos/dji-mavic-2-pro.jpg",
+    "titulo": "Notebook HP-4579",
+    "descripcionLarga": "Ullam, numquam? Error quasi mollitia sed beatae quo debitis cupiditate, perspiciatis iste? Aliquam, soluta tempora hic qui, porro ut quis similique atque eum, harum illo laborum sint molestiae neque quo repellat necessitatibus error tempore veritatis sed veniam! Autem ad harum exercitationem qui pariatur quidem cumque, nostrum perspiciatis eius quam, veniam ex suscipit, et eum tenetur provident corrupti? Unde dolorum molestiae, labore quis distinctio earum beatae aut architecto veniam est quisquam cum, neque vel accusamus dolor iusto nulla, explicabo consequuntur ea rem error! Ad delectus veniam, magni repellat sed explicabo quaerat sequi enim, ex eius laborum officia sunt ullam perspiciatis velit.",
+    "evaluacion": 5,
+    "evaluadores": 7,
+    "precioLista": 75320,
+    "precioDto": 65320,
+    "observacion01": "32GB",
+    "observacion02": "15.6",
+    "observacion03": "i7"
+    },
+    {
+    "imagen": "img/productos/chromecast-google.jpg",
+    "titulo": "Notebook HP-4579",
+    "descripcionLarga": "Dolorum fuga nulla officia sequi temporibus ipsum, aspernatur accusamus, error tempora quia voluptatibus consequuntur reprehenderit aliquam aperiam possimus. Voluptates officiis ea harum minus aut culpa iste maxime autem, dolorem consequatur similique voluptatum. Laboriosam odit unde tempora ad itaque. Aliquid eaque id molestias nisi, aspernatur incidunt error cumque ut beatae sapiente itaque hic veritatis voluptatibus, exercitationem obcaecati expedita nam odit repudiandae architecto laudantium suscipit perferendis. Assumenda inventore animi illo quos laborum, modi, reiciendis labore laboriosam suscipit deserunt consequatur temporibus enim amet, nulla quaerat dignissimos. Corporis ea accusantium quaerat obcaecati expedita totam quas id delectus, eligendi sapiente, dolorum omnis eaque. Iusto, officia.",
+    "evaluacion": 5,
+    "evaluadores": 7,
+    "precioLista": 75320,
+    "precioDto": 65320
+    },
+    {
+    "imagen": "img/productos/google-nest-mini.jpg",
+    "titulo": "Notebook HP-4579",
+    "descripcionLarga": "Natus iusto illo exercitationem delectus itaque sunt repellat nemo neque consectetur, animi veniam quisquam necessitatibus rem atque hic ratione ipsam ut incidunt quibusdam rerum fuga, dolores ab minus. Aliquid quas provident asperiores ipsum fuga reprehenderit sit expedita quisquam corrupti praesentium cupiditate perspiciatis, beatae amet dicta nulla voluptate laborum officia harum tenetur vero veniam accusamus delectus. Dolores animi quidem, assumenda provident veniam porro possimus aliquid placeat numquam necessitatibus consectetur consequatur eum maiores repellat corrupti vel in iusto explicabo nihil sint quisquam error. Dolorum, dolorem! Perspiciatis soluta nemo magnam facere maxime officiis cupiditate! Quisquam id soluta architecto alias dolorum exercitationem non possimus.",
+    "evaluacion": 5,
+    "evaluadores": 7,
+    "precioLista": 75320,
+    "precioDto": 65320,
+    "observacion01": "Ni idea de los beneficios"
+    },
+    {
+    "imagen": "img/productos/drone-dji.jpg",
+    "titulo": "Notebook HP-4579",
+    "descripcionLarga": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nesciunt natus dolore odit autem corporis eum repellendus voluptas, rerum adipisci, nihil, obcaecati magni in sapiente molestiae dolor rem. Asperiores laborum assumenda reprehenderit accusantium aspernatur illum, quidem aliquid beatae nihil similique eveniet soluta aperiam fugiat fugit neque ad dolorum a, excepturi inventore fuga iste repellat. Voluptatem accusamus eligendi maxime at totam quaerat distinctio tenetur inventore modi odit laborum esse obcaecati dolor, assumenda error quia. Est quidem expedita fuga unde. Natus, ut. Consectetur reiciendis sint dignissimos. Nobis, soluta quis mollitia, minus provident nulla nemo ad temporibus molestias delectus eveniet exercitationem reprehenderit aliquam.",
+    "evaluacion": 5,
+    "evaluadores": 7,
+    "precioLista": 75320,
+    "precioDto": 65320,
+    "observacion01": "Cámara Full HD integrada"
+    }
+]

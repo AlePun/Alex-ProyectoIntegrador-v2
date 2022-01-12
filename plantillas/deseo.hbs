@@ -1,0 +1,76 @@
+<div class="cabecera-deseo">
+    <h3><i class="fa fa-heart"></i> | Detalle de deseos (Wish list)</h3>
+    <h3 class="btnCierre" onclick="deseoController.ocultarXDeseo()">X</h3>
+</div>
+<hr>
+
+<section class="listaDeDeseos">
+    <article class="medioBloqueDeseo">
+        <h2>Si querés guardar tu selección en tu mail, pasanos tus datos...</h2>
+        <form class="formularioDeseos" autocomplete="off">
+            <div class="lineaFormulario">
+                <input type="text" id="deNombre" placeholder="Tu nombre completo"  autocomplete="off">
+            </div>
+            <div class="lineaFormulario">
+                <input type="text" id="deEmail" Placeholder="Tu dirección de mail"  autocomplete="off">
+            </div>
+        <h2>Si querés que le contemos a alguien sobre tu selección, pasanos sus datos... 😉</h2>
+            <div class="lineaFormulario">
+                <input type="text" id="paraNombre" placeholder="Su Nombre completo"  autocomplete="off">
+            </div>
+            <div class="lineaFormulario">
+                <input type="text" id="paraEmail" placeholder="Su dirección de mail"  autocomplete="off">
+            </div>
+            <div class="lineaFormulario">
+                <input type="checkbox" id="registro" checked>
+                <label for="registro"> Me gustaría estar al tanto de novedades. (No hacemos SPAM, no nos gusta.)</label>
+            </div>
+            <div class="lineaFormulario">
+                <textarea id="nota" placeholder="Contanos porque elegiste estos productos."></textarea>
+            </div>
+        </form>
+    </article>
+
+    {{#if deseo.length }}
+    <article class="medioBloqueDeseo">
+        
+            {{{reseteo }}}
+            {{#each deseo}}
+                <div class="detalleDeseos">
+                    <div class="detalleDeseos_imagen">
+                        <img class="imagenDeseo" src="{{imagen}}" alt="{{nombre}}"> 
+                    </div>
+                    <div class="detalleDeseos_contenido">
+                        <div class="detalleDeseos_contenido-titulo">{{titulo}}</div>
+                        <div class="detalleDeseos_contenido-descripcion">{{descripcion}}</div>
+                        <div  class="detalleDeseos_contenido-pu importes">Precio Unitario: {{{ajusteMoneda precioDto}}}</div>
+                    </div>
+                    <div class="detalleDeseos_variables">
+                        
+                            <div class="detalleDeseos_variables-titulo"> Cantidad</div>
+                            <div class="detalleDeseos_variables-cantidad">
+                                <span onClick="deseoController.restarProductoDeseo({{this.id}})"><i class="restar fa fa-minus"></i></span> 
+                                <span style="margin: 0 0.9em;"> {{cantidad}} </span> 
+                                <span onClick="deseoController.sumarProductoDeseo({{this.id}})"><i class="sumar fa fa-plus"></i></span>
+                                <span><i onclick="deseoController.borrarProductoDeseo({{id}})" class=" acciones fa fa-trash" ></i></span>
+                            </div>
+                            <div class="detalleDeseos_contenido-st">{{{ajusteST precioDto cantidad}}}</div>
+                        
+                    </div>
+                </div>
+            {{/each}}
+        
+        <div class="DetalleSubtotal">
+            Estás sumando {{contador}} productos por un importe total de <em><b>{{acumulador}}</b></em>.
+        </div>
+    </article>
+    {{else}}
+        <h2>La lista de desos está vacía.</h2>
+        <h2>Conviene que la completes antes de ingresar a ver su funcionalidad!!!</h2>
+    {{/if}}
+</section>
+<hr>
+<div class="botonDerecha">
+    <button class="btn__enviarDeseo" onclick="deseoController.enviarDeseo()">Enviar</button>
+    <button class="btn__enviarDeseo" onclick="deseoController.ocultarXDeseo()">Seguir eligiendo</button>
+</div>

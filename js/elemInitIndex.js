@@ -1,7 +1,4 @@
 function initElemIndex() {
-    // console.log('Estoy en initElemIndex()')    
-
-    var elemMarcoCarousel = document.getElementsByClassName('marco-carousel')[0]
 
     function getNombreArchivo(id) {
         return 'views/' + id + '.html'
@@ -29,6 +26,7 @@ function cargarMarco(id) {
     })
 }
 
+var elemMarcoCarousel = document.getElementsByClassName('marco-carousel')[0]
 cargarMarco('marco-carousel')
 
 var elemMarcoBeneficios = document.getElementsByClassName('marco-beneficios')[0]
@@ -36,7 +34,4 @@ cargarMarco('marco-beneficios')
 
 var elemTestimonials = document.getElementsByClassName('marco-testimonios')[0]
 cargarMarco('marco-testimonios')
-
-
-
 }
