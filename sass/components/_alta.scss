@@ -1,4 +1,4 @@
-.listaDeDeseos{
+.listaDeAlta{
     display: flex;
     justify-content:space-between;
 }
@@ -7,11 +7,11 @@
     margin: 0 2em;
     padding: 5px;
     display: inline-block;
-    justify-content:left;
+    justify-content: left;
 
-    input{
+    & input{
         width: 100%;
-        border: none;
+        border-bottom: 2px solid #ccc;
         margin: 0.2em 0;
         padding: 0.5em 0.2em;
     }
@@ -25,13 +25,13 @@
     }
 }
 
-.formularioDeseos{
+.formularioAlta{
     display: flex;
     flex-direction: column;
 }
 
 
-.section-deseo {
+.section-alta {
     padding: 5px;
     user-select: none;
     overflow-y: auto;
@@ -106,7 +106,7 @@
         color: #333;
     }
     
-    table button {
+    button {
         margin-top: 0.5em;
         margin-left: 0.5em;
         width: 80px;
@@ -114,6 +114,7 @@
         font-size: 1.0em;
         font-weight: bold;
         margin-bottom: 0.5em;
+        border:none;
     }
     .botonDerecha{
         display: flex;
@@ -121,7 +122,7 @@
         width: 94%;
     }
 
-    button.btn__enviarDeseo {
+    button .btn__Alta {
         //float: right;
         margin: 15px;
         max-width: 200px;
@@ -130,17 +131,18 @@
         font-weight: bold;
         align-content: center;
         padding: 0 15px;
+        border:none;
     }
-    button.btn__enviarDeseo:hover {
+    button .btn__Alta:hover {
         color: red;
         cursor: pointer;
     }
 
-    .cabecera-deseo{
+    .cabecera-Alta{
         display: flex;
         justify-content:space-between;
     }
-    .deseo_espacio{
+    .alta_espacio{
         margin-bottom: 3em;
     }
 
@@ -150,96 +152,65 @@
     }
 }
 
-.medioBloqueDeseo{
+.medioBloqueAlta{
     padding: 0.5em;
     max-width: 50%;
 }
 
 
 
-.detalleDeseos{ 
-    display:flex;
-    justify-content: space-between;
-    flex-direction: row;
-    background-color: #fff;
-    align-items: center;
-    // border-bottom: 1px dashed #ccc;
-    width: 95%;
-    margin: 1em auto;
-    padding:0.5em;
 
-}
-
-.detalleDeseos_imagen {
-    margin: 0.3em;
-    border: 1px solid #ccc;
-    padding: 0.1em;
-}
-.imagenDeseo{
-    display:block;
-    margin: 0 auto;
-    width: 120px;
-}
-
-.detalleDeseos_contenido {
-    display:flex;
+.aside_alta{
+    margin: 0.5em;
     justify-content: space-between;
     flex-direction: column;
-    margin: 0.3em;
-    padding: 0.3 em;
-}
-.detalleDeseos_contenido-titulo {
-    font-family: "Poppins", sans-serif;
-    font-size: 0.9em;
-}
-.detalleDeseos_contenido-descripcion {
-    font-family: "Poppins", sans-serif;
-    font-size: 0.7em;
-}
-
-.detalleDeseos_contenido-pu {
-    font-family: "Poppins", sans-serif;
-    font-size: 0.9em;
-}
-
-.detalleDeseos_variables{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-width: 120px;
-    text-align: center;
-}
-
-.detalleDeseos_variables-titulo {
-    border-bottom: 1px solid rgba(136, 132, 132, 0.5);
-    margin-bottom: 0.5em;
-    padding-bottom: 0.5em;
-    font-family: "Poppins", sans-serif;
-    font-size: 0.9em;
-    font-weight: 500;
-}
-.detalleDeseos_variables-cantidad{
-    text-align: center;
-}
-.detalleDeseos_contenido-st {
-    border-top: 1px solid rgba(136, 132, 132, 0.5);
-    margin-top: 0.5em;
-    padding-top: 0.5em;
-    font-size: 0.9em;
-    font-weight: 600;
-    text-align: center;
+    background-color: #ccc;
+    padding: 0.5em;
     
-}
-.acciones{
-    //display: block;
-    text-align: center;
-    font-size: 1.3em;
-    color: #333;
-    margin: 0 0.9em;
+    div{
+        width: 150px;
+        font-size: 1.2em;
+        color: #fff;
+        background-color: #333;
+        margin: 0.2em;
+        padding: 0.5em;
+        text-align: center;
+        &:hover{
+            color: red;
+            cursor: pointer;
+        }
+    }
+
 }
 
-.acciones:hover {
-    color: rgb(116, 28, 28);
-//     font-size: 1.7em;
-    cursor: pointer;
+.article_alta{
+    width: 100%;
+    margin: 0.5em auto;
+    display: flex;
+    margin-bottom:6em;
+
 }
+
+.detalle_altaNoVisible{
+    visibility: hidden;
+}
+
+
+.formAltaModif {
+    display: flex;
+    justify-content: space-around;
+    direction: row;
+    align-items: center;
+    padding: 0 .3em;
+    
+    &__form-container {
+        display: flex;
+        flex-basis: 100%;
+        justify-content: space-around;
+        padding: 0.3em 0.3em ;
+
+        & input[type="text"]{
+            border-bottom: 1px solid #ccc;
+        }
+    }    
+}   

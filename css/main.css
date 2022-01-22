@@ -520,6 +520,199 @@ body {
   display: none;
 }
 
+.listaDeAlta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lineaFormulario {
+  margin: 0 2em;
+  padding: 5px;
+  display: inline-block;
+  justify-content: left;
+}
+.lineaFormulario input {
+  width: 100%;
+  border-bottom: 2px solid #ccc;
+  margin: 0.2em 0;
+  padding: 0.5em 0.2em;
+}
+.lineaFormulario textarea {
+  width: 100%;
+  border: none;
+  margin: 0.2em 0;
+  padding: 0.5em 0.2em;
+  height: 6em;
+  resize: vertical;
+}
+
+.formularioAlta {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-alta {
+  padding: 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow-y: auto;
+  display: none;
+  position: fixed;
+  background-color: #faf0f0;
+  z-index: 2;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  bottom: 50px;
+  box-shadow: 0.3em 0.3em 10em 0.3em black;
+}
+.section-alta--visible {
+  display: block;
+}
+.section-alta h3 {
+  font-size: 1.5em;
+  margin: 0.7em;
+  color: var(--clr-primary);
+}
+.section-alta h2, .section-alta p {
+  font-size: 1.2em;
+  color: var(--clr-primary);
+  width: 90%;
+  margin: 0.5em auto;
+}
+.section-alta .btnCierre {
+  padding: 0.1em 0.3em;
+  border: 1px solid var(--clr-primary);
+}
+.section-alta .btnCierre:hover {
+  color: var(--clr-secondary);
+}
+.section-alta .restar {
+  color: #7e3737;
+  cursor: pointer;
+}
+.section-alta .sumar {
+  color: #378037;
+  cursor: pointer;
+}
+.section-alta table {
+  width: 90%;
+  margin: 0.5em auto;
+}
+.section-alta table, .section-alta th, .section-alta td {
+  border-collapse: collapse;
+  padding: 0.5em;
+}
+.section-alta tr:nth-of-type(even) {
+  background-color: rgba(180, 180, 180, 0.5);
+}
+.section-alta .importes {
+  text-align: right;
+  margin-right: 1.5em;
+}
+.section-alta .cantidad {
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #333;
+}
+.section-alta button {
+  margin-top: 0.5em;
+  margin-left: 0.5em;
+  width: 80px;
+  height: 1.8em;
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  border: none;
+}
+.section-alta .botonDerecha {
+  display: flex;
+  justify-content: flex-end;
+  width: 94%;
+}
+.section-alta button .btn__Alta {
+  margin: 15px;
+  max-width: 200px;
+  height: 35px;
+  font-size: 1em;
+  font-weight: bold;
+  align-content: center;
+  padding: 0 15px;
+  border: none;
+}
+.section-alta button .btn__Alta:hover {
+  color: red;
+  cursor: pointer;
+}
+.section-alta .cabecera-Alta {
+  display: flex;
+  justify-content: space-between;
+}
+.section-alta .alta_espacio {
+  margin-bottom: 3em;
+}
+.section-alta .DetalleSubtotal {
+  margin: 0 auto;
+  width: 95%;
+}
+
+.medioBloqueAlta {
+  padding: 0.5em;
+  max-width: 50%;
+}
+
+.aside_alta {
+  margin: 0.5em;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: #ccc;
+  padding: 0.5em;
+}
+.aside_alta div {
+  width: 150px;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: #333;
+  margin: 0.2em;
+  padding: 0.5em;
+  text-align: center;
+}
+.aside_alta div:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.article_alta {
+  width: 100%;
+  margin: 0.5em auto;
+  display: flex;
+  margin-bottom: 6em;
+}
+
+.detalle_altaNoVisible {
+  visibility: hidden;
+}
+
+.formAltaModif {
+  display: flex;
+  justify-content: space-around;
+  direction: row;
+  align-items: center;
+  padding: 0 0.3em;
+}
+.formAltaModif__form-container {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-around;
+  padding: 0.3em 0.3em;
+}
+.formAltaModif__form-container input[type=text] {
+  border-bottom: 1px solid #ccc;
+}
+
 .card {
   outline: none;
   flex-grow: 1;
@@ -546,6 +739,7 @@ body {
 .card__image {
   margin: 1em;
   background-size: cover;
+  background-color: #ccc;
   height: 200px;
   background-position: center;
   transition: all 0.2s;
@@ -863,13 +1057,14 @@ body {
   text-align: right;
   margin-right: 1.5em;
 }
-.section-carrito .acciones {
+.section-carrito .acciones_alta {
   display: block;
   text-align: center;
   font-size: 1.3em;
   color: #333;
+  border: none;
 }
-.section-carrito .acciones:hover {
+.section-carrito .acciones_alta :hover {
   color: #741c1c;
   cursor: pointer;
 }
@@ -879,7 +1074,7 @@ body {
   font-weight: bold;
   color: #333;
 }
-.section-carrito table button {
+.section-carrito button {
   margin-top: 0.5em;
   margin-left: 0.5em;
   width: 80px;
@@ -887,6 +1082,7 @@ body {
   font-size: 1em;
   font-weight: bold;
   margin-bottom: 0.5em;
+  border: none;
 }
 .section-carrito .botonDerecha {
   display: flex;
@@ -895,7 +1091,7 @@ body {
 }
 .section-carrito button.btn__enviarCarrito {
   margin: 15px;
-  max-width: 200px;
+  width: 200px;
   height: 35px;
   font-size: 1em;
   font-weight: bold;
@@ -1071,7 +1267,7 @@ body {
   justify-content: space-between;
 }
 .section-deseo .deseo_espacio {
-  margin_bottom: 3em;
+  margin-bottom: 3em;
 }
 .section-deseo .DetalleSubtotal {
   margin: 0 auto;
@@ -2131,6 +2327,280 @@ SEARCH BAR
     display: none;
   }
 }
+/*********************************
+SEARCH BAR
+*********************************/
+h2 {
+  margin: 0em 0.8em;
+  padding: 0em 0.5em;
+  color: var(--clr-primary);
+}
+
+hr {
+  margin: 0.8em 0.5em;
+}
+
+.verAltaProducto {
+  display: inline-block;
+}
+
+.noVerAltaProducto {
+  display: none;
+}
+
+.seccionAlta-modal--visible {
+  display: inline-block;
+}
+
+.verEdicionProducto {
+  display: inline-block;
+}
+
+.noVerEdicionProducto {
+  display: none;
+}
+
+.verConsultaProducto {
+  display: inline-block;
+}
+
+.noVerConsultaProducto {
+  display: none;
+}
+
+.sumar-producto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 0 0.3em;
+  visibility: none;
+}
+.sumar-producto__imagen {
+  display: inline-block;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 30px;
+  padding: 1.6em 1em;
+  border: 1px solid #ccc;
+}
+.sumar-producto__form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0.3em 0.3em;
+}
+.sumar-producto__form-search {
+  width: 100%;
+}
+
+.detalleAlta {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-direction: row;
+  background-color: #fff;
+  align-items: center;
+  width: 95%;
+  margin: 0.3em auto;
+  padding: 0.3em;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8em;
+  visibility: none;
+}
+.detalleAlta__visible {
+  visibility: visible;
+}
+.detalleAlta__MensajeError {
+  visibility: visible;
+  color: red;
+}
+.detalleAlta:nth-of-type(even) {
+  background-color: rgba(180, 180, 180, 0.5);
+}
+.detalleAlta__imagen {
+  margin: 0.3em;
+  border: 1px solid #fff;
+  padding: 0.1em;
+}
+.detalleAlta__imagenDetalle {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 150px;
+  background-image: url(../../img/200x150.jpg);
+  background-size: cover;
+}
+.detalleAlta .detalleAlta__label {
+  box-sizing: border-box;
+  border: none;
+  max-width: 100px;
+  border-bottom: 1px solid darkgray;
+  background-color: transparent;
+  padding: 3px 5px;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+  color: red;
+}
+.detalleAlta label {
+  box-sizing: border-box;
+  border: none;
+  width: 100%;
+  border-bottom: 1px solid darkgray;
+  background-color: transparent;
+  padding: 3px 5px;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+}
+.detalleAlta input {
+  box-sizing: border-box;
+  border: none;
+  width: 100%;
+  border-bottom: 1px solid darkgray;
+  background-color: transparent;
+  padding: 3px 5px;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+}
+.detalleAlta textarea {
+  box-sizing: border-box;
+  width: 90%;
+  border: none;
+  border-bottom: 1px solid darkgray;
+  background-color: transparent;
+  width: 100%;
+  height: 5em;
+  padding: 3px 5px;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+  resize: none;
+}
+.detalleAlta__contenido {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 0 1em;
+  padding: 0.3 em;
+}
+.detalleAlta__contenido-titulo {
+  width: 100%;
+  margin: 0.5em auto;
+  padding: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row;
+  flex-basis: 100%;
+  flex-grow: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-weight: 700;
+}
+.detalleAlta__contenido-descripcion {
+  width: 100%;
+  display: flex;
+  padding: 0.5em 0;
+  justify-content: space-between;
+  flex-flow: row;
+  flex-basis: 100%;
+  flex-grow: 100%;
+  font-size: 0.9em;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+.detalleAlta__contenido-pu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row;
+  flex-basis: 100%;
+  flex-grow: 100%;
+}
+.detalleAlta .detalleAlta_variables {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+.detalleAlta .detalleAlta_variables-titulo {
+  border-bottom: 1px solid rgba(136, 132, 132, 0.5);
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+.detalleAlta .detalleAlta_variables-cantidad {
+  text-align: center;
+}
+.detalleAlta .detalleAlta_contenido-st {
+  border-top: 1px solid rgba(136, 132, 132, 0.5);
+  margin-top: 0.5em;
+  padding-top: 0.5em;
+  font-size: 0.9em;
+  font-weight: 600;
+  text-align: center;
+}
+.detalleAlta .accionesAlta {
+  text-align: center;
+  font-size: 1.3em;
+  color: #333;
+  margin: 0 0.5em;
+}
+.detalleAlta .accionesAlta:hover {
+  color: #741c1c;
+  cursor: pointer;
+}
+
+.sumar-producto input[type=text],
+.sumar-producto input[type=search],
+#TipoProducto {
+  float: right;
+  padding: 0.2em 1em !important;
+  border: none;
+  border-bottom: 2px solid var(--clr-secondary);
+  margin-right: 1em;
+  font-size: 0.9em;
+  color: var(--clr-dark-gray);
+}
+
+.sumar-producto__form-container button {
+  float: right;
+  padding: 0.2em;
+  margin-right: 0.5em;
+  font-size: 1.1em;
+  border: none;
+  cursor: pointer;
+  color: var(--clr-secondary);
+}
+
+@media (max-width: 950px) {
+  #TipoProducto {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .sumar-producto__logo-container {
+    background-image: url(../img/NN_02_h35w42.png);
+    background-repeat: no-repeat;
+    width: 100px;
+  }
+
+  .topRedesSociales {
+    display: none;
+  }
+}
+@media (max-width: 425px) {
+  .sumar-producto__form-container {
+    display: none;
+  }
+
+  .main-header__linea-bienvenida {
+    display: none;
+  }
+}
 p {
   display: table-row;
 }
@@ -2643,7 +3113,7 @@ option {
 .efectodefuminado__html {
   height: 1000px;
   background-color: darkgreen;
-  background-image: url(../../img/imagenAle.png);
+  background-image: url(../img/imagenAle.png);
   background-size: 80% auto;
   background-position: top right;
   background-attachment: fixed;

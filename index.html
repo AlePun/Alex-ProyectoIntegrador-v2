@@ -18,7 +18,7 @@
 </head>
 <body>
 
-<header class="main-header">
+<header id="header" class="main-header">
     
     <div class="main-header__linea-bienvenida">
         <p class="mensajeVariable"> <u>Promo primera compra</u> | <em>Código: <b>MiCompra15%</b></em></p>
@@ -56,7 +56,6 @@
             </span>
             <!-- Formulario de búsqueda, con combo tipoProducto -->
             <form class="search-bar__form-container">
-                <!-- <label for="TipoProducto" class="search-bar__form-label ">Buscar: </label> -->
                 <select name = "TipoProducto" id="TipoProducto">
                     <option value = "Celulares">Celulares</option>
                     <option value = "Drones">Drones</option>
@@ -116,10 +115,8 @@
                     <a class="nav-bar__nav-link" id="nosotros">Nosotros</a>
                 </li>
             </ul>
-            <section id= "section-carrito" class="section-carrito"></section>
-            <section id= "section-deseo" class="section-deseo"></section>
-            <section class="section-detalleProducto"></section>
         </nav>
+        
         
         <script>
             let chkmenu = document.getElementById('menu')
@@ -130,15 +127,23 @@
                 navbar.classList.toggle('open')
                 chkmenu.checked = !chkmenu.checked
             })
-    
+            
             $(document).ready(function(){
-            $('#nav-icon1').click(function(){
-                $(this).toggleClass('open');
+                $('#nav-icon1').click(function(){
+                    $(this).toggleClass('open');
+                });
             });
-            });
-        </script>
+            </script>
         <!-- <script src="js/main.js"></script> -->
     </header>
+    
+    <!-- ------------------------------------------------------------- -->
+    <!--                        Secciones Modal                        -->
+    <!-- ------------------------------------------------------------- -->
+    
+    <section id= "section-carrito" class="section-carrito"></section>
+    <section id= "section-deseo" class="section-deseo"></section>
+    <section id= "section-detalleProducto" class="section-detalleProducto"></section>
 
     <!-- ------------------------------------------------------------- -->
     <!--                          Bloque Main                          -->
@@ -264,52 +269,33 @@
     <script src="js/clientes/http.client.js"></script>
 
     <!-- servicios -->
-    <script src="js/servicios/producto.js"></script>
     <script src="js/servicios/carrito.js"></script>
     <script src="js/servicios/deseo.js"></script>
+    <script src="js/servicios/producto.js"></script>
 
     <!-- modelos -->
-    <script src="js/modelos/producto.js"></script>
     <script src="js/modelos/carrito.js"></script>
     <script src="js/modelos/deseo.js"></script>
+    <script src="js/modelos/producto.js"></script>
 
     <!-- controladores -->
-    <script src="js/controladores/productos.js"></script>
     <script src="js/controladores/carrito.js"></script>
     <script src="js/controladores/deseo.js"></script>
+    <script src="js/controladores/productos.js"></script>
 
     <!-- menúes -->
     <script src="js/menu/alta.js"></script>
-    <script src="js/menu/nosotros.js"></script>
-    <script src="js/menu/contacto.js"></script>
-    <script src="js/menu/hbs_helpers.js"></script>  
     <script src="js/menu/carrito.js"></script>
+    <script src="js/menu/contacto.js"></script>
     <script src="js/menu/deseo.js"></script>
+    <script src="js/menu/hbs_helpers.js"></script>  
     <script src="js/menu/inicio.js"></script>  
+    <script src="js/menu/nosotros.js"></script>
+    <!-- <script src="js/menu/modificacion_producto.js"></script> -->
 
     <!-- Código de arranque -->
     <script src="js/main.js"></script>
-
-
-
-
-
-
-
-
-
-<!-- 
-
-
-        <script src="js/main.js"></script>
-        <script src="js/alta.js"></script>
-        <script src="js/contacto.js"></script>
-        <script src="js/nosotros.js"></script>
-        <script src="js/cart.js"></script>
-        <script src="js/deseo.js"></script>
-        <script src="js/card.js"></script>
-        <script src="js/elemInitIndex.js"></script> -->
-        <script src="js/selColores.js"></script>
+    <script src="js/selColores.js"></script>
 
 </body>
 </html>

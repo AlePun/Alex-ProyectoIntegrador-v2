@@ -1,0 +1,119 @@
+
+    <div class="detalleAlta detalleAlta__contenido-titulo">
+        En total se encontraron {{productos.length}} productos.  | Sumar uno más:
+        <i class="sumar fa fa-plus accionesAlta " onclick="verAltaProducto()"></i> 
+    </div>
+    
+{{#if productos.length }}
+    {{#each productos}}
+    {{!-- Detalle de productos existentes --}}
+        <section class="ConsultaProducto">
+            <div class="detalleAlta detalleAlta__Visible">
+                <div class="detalleAlta__imagen">
+                    <img class="detalleAlta__imagenDetalle" src="{{imagen}}" alt="{{nombre}}"> 
+                </div>
+                <div class="detalleAlta__contenido">
+                    <div class="detalleAlta__contenido-titulo">Id: {{id}} | Titulo: {{nombre}} | Categoría: {{categoria}}</div>
+                    <div class="detalleAlta__contenido-descripcion">{{descripcion}}</div>
+                    <div class="detalleAlta__contenido-pu importes">Precio Lista: {{{ajusteMoneda precioLista}}} | Precio Descuento: {{{ajusteMoneda precioDto}}}</div>
+                    <div class="detalleAlta__contenido-pu importes">Evaluación: {{{evaluacion}}} | Evaluadores: {{{evaluadores}}} | Existencias: {{{stock}}}</div>
+                    <div class="detalleAlta__contenido-descripcion">Observaciones: {{{observacion01}}} | {{{observacion02}}} | {{{observacion03}}} | Es Promo: {{{esPromo}}}</div>        
+                </div>
+                <div class="detalleAlta_variables">
+                    <div class="detalleAlta_variables-titulo"> Acciones</div>
+                    <div class="detalleAlta_variables-cantidad">
+                        
+                            <div class="accionesAlta" onclick="verModifProducto({{id}})"><i class="restar fa fa-edit"></i></div>
+                            <div class="accionesAlta" onclick="productoController.borrarProducto({{id}})"><i class="restar fa fa-trash"></i></div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </section>            
+
+{{!-- Detalle de formulario de edición / actualización --}}
+{{!-- 1.- No visible --}}
+{{!-- 2.- Pre Cargado --}}
+    <section class="ModificacionProducto noVerEdicionProducto">
+        <form autocomplete="off" id="formAltaProducto">
+            <div class="detalleAlta detalleAlta__visible">
+                <div class="detalleAlta__imagen">
+                    <img class="detalleAlta__imagenDetalle" src="{{imagen}}" alt="{{nombre}}"> 
+                    <input class="detalleAlta__input" id="imagen" name="imagen" type="text" placeholder="Ingresar la imagen" value='{{imagen}}'>
+                </div>
+
+                <div class="detalleAlta__contenido">
+                    <div class="detalleAlta__contenido-titulo">
+                        <label class="detalleAlta__label" for="nombre">Nombre: </label>
+                        <input class="detalleAlta__input" id="nombre" name="nombre" type="text" value='{{nombre}}'>
+                        <label class="detalleAlta__label" for="categoria">Categoría: </label>
+                        <input class="detalleAlta__input" id="categoria" name="categoria" type="text" value='{{categoria}}' list="ListaCate">
+                    </div>
+                
+                    <div class="detalleAlta__contenido-descripcion">
+                        <input class="detalleAlta__input" id="descripcion" name="descripcion" type="textarea" rows="2" width="" value='{{descripcion}}'>
+                    </div>
+                    <div class="detalleAlta__contenido-descripcion importes">
+                        
+                        <label class="detalleAlta__label" for="precioLista">$Lista: </label>
+                        <input class="detalleAlta__input" id="precioLista" name="precioLista" type="text"  value={{precioLista}}>
+                        
+                        <label class="detalleAlta__label" for="precioDto">$Descuento: </label>
+                        <input class="detalleAlta__input" id="precioDto" name="precioDto" type="text" value={{precioDto}}>
+                    </div>
+                    <div class="detalleAlta__contenido-descripcion importes">
+                        
+                        <label class="detalleAlta__label" for="evaluacion">Evaluación: </label>
+                        <input class="detalleAlta__input" id="evaluacion" name="evaluacion" type="text" value={{evaluacion}}>
+                        
+                        <label class="detalleAlta__label" for="evaluadores">Evaluadores: </label>
+                        <input class="detalleAlta__input" id="evaluadores" name="evaluadores" type="text" value={{evaluadores}}>
+
+                        <label class="detalleAlta__label" for="stock">Stock: </label>
+                        <input class="detalleAlta__input" id="stock" name="stock" type="text" value={{stock}}>
+                    </div>
+                    <div class="detalleAlta__contenido-descripcion">
+                        <label class="detalleAlta__label" for="observacion01">Observaciones: </label>
+                        <input class="detalleAlta__input" id="observacion01" name="observacion01" type="text" value='{{observacion01}}'>
+                        <input class="detalleAlta__input" id="observacion02" name="observacion02" type="text" value='{{observacion02}}'>
+                        <input class="detalleAlta__input" id="observacion03" name="observacion03" type="text" value='{{observacion03}}'>
+                        <input class="detalleAlta__input" id="esPromo" name="esPromo" type="checkbox" value='{{esPromo}}'>
+                    </div>
+                    <div class="detalleAlta__contenido-descripcion">
+                        <div class="detalleAlta__MensajeError"></div>
+                    </div>
+                </div>
+                <div class="detalleAlta_variables">
+                    <div class="detalleAlta_variables-titulo">Acciones</div>
+                    <div class="detalleAlta_variables-cantidad">
+
+                        {{!-- <div class="accionesAlta" onclick="productoController.actualizarProducto({{{this.id}}}, {{{producto imagen nombre categoria descripcion precioLista precioDto evaluacion evaluadores stock observacion01 observacion02 observacion03}}})"> --}}
+                        <div class="accionesAlta" title={{{this.id}}} onclick="productoController.actualizarProducto({{{this.id}}}, imagen, nombre, categoria, descripcion, precioLista, precioDto, evaluacion, evaluadores, stock, observacion01, observacion02, observacion03, esPromo)">
+                            <button class="sumar fa fa-plus accionesAlta">Opc-1</button> 
+                        </div>                
+
+                        <div class="accionesAlta" onclick="verModifProducto({{id}})">{{!-- onclick="productoController.borrarProducto({{id}})"> --}}
+                            <button class="restar fa fa-trash"><input type="reset" value=""></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <datalist id="ListaCate">
+            <option value = "Celulares">
+            <option value = "Drones">
+            <option value = "Fotografía">
+            <option value = "Ordenadores">
+            <option value = "Sonido">
+            <option value = "TV">
+            <option value = "Otros">
+        </datalist>
+    </section>
+
+
+        {{/each}}
+    {{!-- </table> --}}
+{{else}}
+    <h2>No se encontraron productos</h2>
+{{/if}}

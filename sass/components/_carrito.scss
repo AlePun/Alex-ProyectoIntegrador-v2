@@ -57,16 +57,17 @@
         text-align: right;
         margin-right: 1.5em;
     }
-    .acciones{
+    .acciones_alta{
         display: block;
         text-align: center;
         font-size: 1.3em;
         color: #333;
-    }
-    .acciones:hover {
-        color: rgb(116, 28, 28);
-        // font-size: 1.7em;
-        cursor: pointer;
+        border: none;
+        :hover {
+            color: rgb(116, 28, 28);
+            // font-size: 1.7em;
+            cursor: pointer;
+        }
     }
     .cantidad{
         text-align: center;
@@ -75,7 +76,7 @@
         color: #333;
     }
     
-    table button {
+    button {
         margin-top: 0.5em;
         margin-left: 0.5em;
         width: 80px;
@@ -83,6 +84,7 @@
         font-size: 1.0em;
         font-weight: bold;
         margin-bottom: 0.5em;
+        border:none;
     }
     .botonDerecha{
         display: flex;
@@ -91,9 +93,9 @@
     }
 
     button.btn__enviarCarrito {
-        //float: right;
+    
         margin: 15px;
-        max-width: 200px;
+        width: 200px;
         height: 35px;
         font-size: 1em;
         font-weight: bold;
@@ -107,7 +109,7 @@
         background-color: var(--clr-primary);
         cursor: pointer;
     }
-
+    
     .cabecera-carrito{
         display: flex;
         justify-content:space-between;

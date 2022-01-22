@@ -1,0 +1,67 @@
+{{!-- Detalle de formulario de edición / actualización --}}
+{{!-- 1.- No visible --}}
+{{!-- 2.- Pre Cargado --}}
+    <section class="ModificacionProducto noVerEdicionProducto">
+        <form autocomplete="off" id="formAltaProducto">
+            <div class="detalleAlta detalleAlta__visible">
+                <div class="detalleAlta__imagen">
+                    <img class="detalleAlta__imagenDetalle" src="{{imagen}}" alt="{{nombre}}"> 
+                    <input class="detalleAlta__input" id="imagen" type="text" placeholder="Ingresar la imagen">
+                </div>
+
+                <div class="detalleAlta__contenido">
+                    <div class="detalleAlta__contenido-titulo">
+                        <label class="detalleAlta__label" for="nombre">Nombre: </label>
+                        <input class="detalleAlta__input" id="nombre" type="text" value={{this.nombre}}>
+                        <label class="detalleAlta__label" for="categoria">Categoría: </label>
+                        <input class="detalleAlta__input" id="categoria" type="text" value={{categoria}}>
+                    </div>
+                
+                    <div class="detalleAlta__contenido-descripcion">
+                        <textarea class="detalleAlta__input" id="descripcion" type="textarea" rows="2" width="">{{descripcion}}</textarea>
+                    </div>
+                    <div class="detalleAlta__contenido-descripcion importes">
+                        
+                        <label class="detalleAlta__label" for="precioLista">$Lista: </label>
+                        <input class="detalleAlta__input" id="precioLista" type="text"  value={{precioLista}}>
+                        
+                        <label class="detalleAlta__label" for="precioDto">$Descuento: </label>
+                        <input class="detalleAlta__input" id="precioDto" type="text" value={{precioDto}}>
+                    </div>
+                    <div class="detalleAlta__contenido-descripcion importes">
+                        
+                        <label class="detalleAlta__label" for="evaluacion">Evaluación: </label>
+                        <input class="detalleAlta__input" id="evaluacion" type="text" value={{evaluacion}}>
+                        
+                        <label class="detalleAlta__label" for="evaluadores">Evaluadores: </label>
+                        <input class="detalleAlta__input" id="evaluadores" type="text" value={{evaluadores}}>
+
+                        <label class="detalleAlta__label" for="stock">Stock: </label>
+                        <input class="detalleAlta__input" id="stock" type="text" value={{stock}}>
+                    </div>
+                    <div class="detalleAlta__contenido-descripcion">
+                        <label class="detalleAlta__label" for="observacion01">Observaciones: </label>
+                        <input class="detalleAlta__input" id="observacion01" type="text" value={{observacion01}}>
+                        <input class="detalleAlta__input" id="observacion02" type="text" value={{observacion02}}>
+                        <input class="detalleAlta__input" id="observacion03" type="text" value={{observacion03}}>
+                    </div>
+                    <div class="detalleAlta__contenido-descripcion">
+                        <div class="detalleAlta__MensajeError"></div>
+                    </div>
+                </div>
+                <div class="detalleAlta_variables">
+                    <div class="detalleAlta_variables-titulo">Acciones</div>
+                    <div class="detalleAlta_variables-cantidad">
+                        {{!-- <div class="accionesAlta" onclick="productoController.actualizarProducto({{id}})"> --}}
+                        <div class="accionesAlta" onclick="productoController.actualizarProducto(this.id)">
+                            <button class="sumar fa fa-plus accionesAlta"></button> 
+                        </div>                
+                
+                        <div class="accionesAlta" onclick="verModifProducto({{id}})">
+                            <button class="restar fa fa-trash"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>

@@ -46,9 +46,12 @@ class Main {
         // Carga del código de vista (HTML) de la plantilla
         let main = document.querySelector('main')
         main.innerHTML = plantilla
-
+        
         // Carga del código script (JS) de la plantilla
         this.initJS(id)
+        // Adiciono la siguiente línea para resolver la caída dl menú
+        $('html, body').animate({ scrollTop: 0 }, 'smooth');// nueve al top of page con animación
+        // scroll(0,0) sin animación
     }
 
     async cargarPlantillas() {
@@ -56,9 +59,10 @@ class Main {
         /* Carga inicial de la vista determinada por la url visitada */
         /* --------------------------------------------------------- */
         let id = location.hash.slice(1) || 'inicio'
-        //console.log(location.hash.slice(1))
+        // console.log(location.hash.slice(1))
         this.marcarLink(id)
         await this.cargarPlantilla(id)
+        
 
         /* ------------------------------------------------------------- */
         /* Carga de cada uno de los contenidos según la navegación local */
@@ -71,20 +75,20 @@ class Main {
                 e.preventDefault()
                 let id = link.id
                 location.hash = id
+                // console.log(location)
             })
         })
-
         window.addEventListener('hashchange', async () => {
             let id = location.hash.slice(1) || 'inicio'
             this.marcarLink(id)
+            // await this.cargarPlantilla(id)
             await this.cargarPlantilla(id)
         })
     }
-        
+    
     async start() {
         await this.cargarPlantillas()
     }
 }
-
 const main = new Main()
 main.start()

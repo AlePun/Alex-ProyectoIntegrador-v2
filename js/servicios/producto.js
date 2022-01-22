@@ -8,14 +8,14 @@ class ProductoService {
     }
 
     async guardarProductoService(producto) {
+        
         let productoGuardado = await http.post(this.URL_PRODUCTOS, producto)
-        //console.log(productoGuardado)
         return productoGuardado
     }
 
     async actualizarProductoService(id,producto) {
         let productoActualizado = await http.put(this.URL_PRODUCTOS, id, producto)
-        //console.log(productoActualizado)
+        // console.log(productoActualizado)
         return productoActualizado
     }
 

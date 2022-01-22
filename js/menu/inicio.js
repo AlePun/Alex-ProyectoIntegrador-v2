@@ -25,6 +25,15 @@ function agregarDeseo(e,id,ref) {
     deseoController.agregarAlDeseo(producto)    
 }
 
+function masInfo(e,id) {
+    e.preventDefault()
+    let producto = productoController.productos.find( producto => producto.id == id )
+    console.log(id)
+    console.log(producto)
+    
+    //deseoController.agregarAlDeseo(producto)    
+}
+
 function sumarCarrito(e,id,ref) {
     e.preventDefault()
 

@@ -11,8 +11,9 @@ Handlebars.registerHelper('reseteo', function() {
     contador = 0
 });    
 
-
 Handlebars.registerHelper('substring', function( string, start, end ) {
+    //console.log(string)
+    
     var theString = string.substring( start ,end );
 
     if( string.length > end ) {
@@ -20,6 +21,23 @@ Handlebars.registerHelper('substring', function( string, start, end ) {
     }
 
     return new Handlebars.SafeString(theString);
+});
+
+Handlebars.registerHelper('producto', function( dato01, dato02, dato03, dato04, dato05, dato06, dato07, dato08, dato09, dato10, dato11, dato12 ) {
+    
+    return [{   imagen: dato01, 
+                nombre: dato02, 
+                categoria: dato03, 
+                descripcion: dato04, 
+                precioLista: dato05, 
+                precioDto: dato06, 
+                evaluacion: dato07, 
+                evaluadors: dato08, 
+                stock: dato09, 
+                observacion01: dato10, 
+                observacion02: dato11, 
+                observacion03: dato12}
+            ];
 });
 
 Handlebars.registerHelper('ayudante', function( este ) {

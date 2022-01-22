@@ -13,21 +13,21 @@ function initInicio() {
         }
     }
     
-    // function sumarProductoDeseo(id, titulo){
-    //     elemSectionCart.innerHTML += `<div class="deseo__item">${titulo},${id}</div>`
-    //     console.log(`${titulo}, ${id}`)
+    // function sumarProductoDeseo(id, nombre){
+    //     elemSectionCart.innerHTML += `<div class="deseo__item">${nombre},${id}</div>`
+    //     console.log(`${nombre}, ${id}`)
     //     }
 
-    // function sumarProductoCarrito(id, titulo){
-    // elemSectionCart.innerHTML += `<div class="cart__item">${titulo},${id}</div>`
-    // console.log(`${titulo},${id}`)
+    // function sumarProductoCarrito(id, nombre){
+    // elemSectionCart.innerHTML += `<div class="cart__item">${nombre},${id}</div>`
+    // console.log(`${nombre},${id}`)
     //     }
 
-    function Card(id, imagen, titulo, descripcion, evaluacion, evaluadores, precioLista, precioDto, observacion01, observacion02, observacion03) {
+    function Card(id, imagen, nombre, descripcion, evaluacion, evaluadores, precioLista, precioDto, observacion01, observacion02, observacion03) {
         
         this.id = id
         this.imagen = imagen
-        this.titulo = titulo
+        this.nombre = nombre
         this.descripcion = descripcion
         this.evaluacion = evaluacion // adicionado en mockAPI.io
         this.evaluadores = evaluadores
@@ -65,7 +65,7 @@ function initInicio() {
 
                 newCard.innerHTML = 
                 `
-                    <article class="card__article" data-id=${this.id} data-titulo=${this.titulo}>
+                    <article class="card__article" data-id=${this.id} data-titulo=${this.nombre}>
                     <div class="card__image"
                             style="background-image: url('${this.imagen}')">
                     </div>
@@ -77,11 +77,11 @@ function initInicio() {
                             <i class="fa fa-info"></i>
                         </div>
                         <!-- Adicionar acción para sumar a lista de deseos -->
-                        <div class="card__barra-producto__deseos" onClick="sumarProductoDeseo(${this.id},'${this.titulo}')">
+                        <div class="card__barra-producto__deseos" onClick="sumarProductoDeseo(${this.id},'${this.nombre}')">
                             <i class="fa fa-heart"></i>
                         </div>
                         <!-- sumar al carrito -->
-                        <div class="card__barra-producto__comprar" onClick="sumarProductoCarrito(${this.id},'${this.titulo}')">
+                        <div class="card__barra-producto__comprar" onClick="sumarProductoCarrito(${this.id},'${this.nombre}')">
                             <i class="fa fa-cart-plus"></i>
                         </div>
                         
@@ -90,7 +90,7 @@ function initInicio() {
 <!-- -----------------------------------------  -->
                     <div class="card__content">
                         <div class="card__inner-content">
-                            <h3 class="card__heading">${this.titulo}</h3>
+                            <h3 class="card__heading">${this.nombre}</h3>
                             <div class="card__description">
                             <p>${this.descripcion.slice(0,90)+(this.descripcion.length>90?" ...":"")}</p>
                             </div>
@@ -123,7 +123,7 @@ function initInicio() {
             new Card(
                 card.id, 
                 card.imagen, 
-                card.titulo, 
+                card.nombre, 
                 card.descripcion, 
                 card.evaluacion, 
                 card.evaluadores, 

@@ -1,5 +1,3 @@
-//let elemSectionCarrito = document.getElementsByClassName('section-carrito')[0]
-
 var elemSectionCarrito = document.getElementsByClassName('section-carrito')[0]
 var btnCarrito = document.getElementsByClassName('search-bar__carrito-container')[0]
 
@@ -21,7 +19,6 @@ function initCarrito() {
         mostrarCarrito = !mostrarCarrito
         
         if(mostrarCarrito) {
-            //console.log(carritoController.carrito)
             await renderTablaCarrito(carritoController.carrito)
         }
         else {
