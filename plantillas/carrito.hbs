@@ -17,9 +17,9 @@
         {{#each carrito}}
             <tr>
                 <td>
-                    <img class="imagenCarrito" src="{{imagen}}" alt="{{titulo}}"> 
+                    <img class="imagenCarrito" src="{{imagen}}" alt="{{nombre}}"> 
                 </td>
-                <td>{{titulo}}</td>
+                <td>{{nombre}}</td>
                 <td class="importes">{{{ajusteMoneda precioDto}}}</td>
                 <td class="cantidad">
                     <span onClick="carritoController.restarProductoCarrito({{this.id}})"><i class="restar fa fa-minus"></i></span> 
