@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/NN_02_h75w75.png"/>
+    <title>Connecticus | Soluciones tech para usuarios inteligentes!</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+
+    <!-- cspell:dictionaries lorem-ipsum -->
+
+</head>
+<body>
+
+<header id="header" class="main-header">
+    
+    <div class="main-header__linea-bienvenida">
+        <p class="mensajeVariable"> <u>Promo primera compra</u> | <em>Código: <b>MiCompra15%</b></em></p>
+        <div class="main-header__linea-segundaMitad">
+            <div class="topRedesSociales">
+                <p>Redes Sociales: 
+                    <a href="http://www.facebook.com/apundyk" target="_blank" class="no-decoration" title="En general sumo solo a familia y amigos, sos bienvenido!">
+                        <i class="fa fa-facebook" style="padding: 3px;"></i> 
+                    </a>
+                    <a href="http://www.instagram.com/apundyk" target="_blank" class="no-decoration" title="No lo uso mucho, pero nunca se sabe">
+                        <i class="fa fa-instagram" style="padding: 3px;"></i> 
+                    </a>
+                    <a href="http://www.linkedin.com/in/apundyk" target="_blank" class="no-decoration" title="Contactame por Linkedin">
+                        <i class="fa fa-linkedin" style="padding: 3px;"></i>
+                    </a>    
+                    <a  href="https://api.whatsapp.com/send?phone=5491158325218&text=Hola%20Quiero%20hacerles%20una%20consulta" target="_blank" class="no-decoration" title="Consultas por Whatsapp">
+                        <i class="fa fa-whatsapp" style="padding: 3px;"></i>
+                    </a>    
+                    <form class="selectorColores">
+                        <select name = "colores" id="colores" onchange="cargarColor()">
+                            <option id= "combo1" value = "combo1" >Colores de Marca</option>
+                            <option id= "combo2" value = "combo2" >Joya, nunca Taxi!</option>
+                            <option id= "combo3" value = "combo3" >Colores Navidad</option>
+                        </select>
+                    </form>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="search-bar">
+            <!-- Logo con lik a index.html -->
+            <span class="search-bar_logo">
+                <a href="/#inicio" class="search-bar__logo-container"></a>
+            </span>
+            <!-- Formulario de búsqueda, con combo tipoProducto -->
+            <form class="search-bar__form-container">
+                <select name = "TipoProducto" id="TipoProducto">
+                    <!-- <option value = "*" style = 'color:red; font-weight:bold;' selected>Categoría</option> -->
+                    <option value = "" selected>Categoría</option> <!-- EVALUAR SI PASO '*' O '' -->
+                    <option value = "Celulares">Celulares</option>
+                    <option value = "Sonido">Sonido</option>
+                    <option value = "Fotografía">Fotografía</option>
+                    <option value = "Ordenadores">Ordenadores</option>
+                    <option value = "TV">TV</option>
+                    <option value = "Otros">Otros</option>
+                </select>
+                <input class="search-bar__form-search" id="buscar" type="search">
+                <button type="submit" id="btnBuscar" ><i class="fa fa-search"></i></button>
+            </form>
+        
+        <!-- Este form lo coloco por el btn que contiene... -->
+        <span class="nav-bar_botones">
+
+            <form action="#" class="search-bar__carrito-container">
+                <div>
+                    <button id= "carrito" type="submit" style="font-size: 1.3em;" class="search-bar__carrito-container"><i class="fa fa-shopping-cart"></i></button>
+                </div>
+            </form>
+            <form action="#" class="search-bar__deseo-container">
+                <div>
+                    <button id= "deseo" type="submit" style="font-size: 1.3em;" class="search-bar__deseo-container"><i class="fa fa-heart"></i></button>
+                </div>
+            </form>
+            <form action="#" class="search-bar__user-container">
+                <div>
+                    <button id= "usuario" type="submit" style="font-size: 1.3em;"  class="search-bar__user-container"><i class="fa fa-user"></i></button>
+                </div>
+            </form>
+            
+            <div class="search-bar__burger-container"> 
+                <div id="nav-icon1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </span>
+    </div>
+    
+    
+    <input type="checkbox" id="menu" class="chk_menu">
+    <nav id="nav-bar" class="nav-bar">
+        <ul class="nav-bar__nav-list">
+                <li>
+                    <a class="nav-bar__nav-link nav-bar__nav-link-active" id="inicio">Inicio</a>
+                </li>
+                <li>
+                    <a class="nav-bar__nav-link" id="alta">Alta</a>
+                </li>
+                <li>
+                    <a class="nav-bar__nav-link" id="contacto">Contacto</a>
+                </li>
+                <li>
+                    <a class="nav-bar__nav-link" id="nosotros">Nosotros</a>
+                </li>
+            </ul>
+        </nav>
+        
+        
+        <script>
+            let chkmenu = document.getElementById('menu')
+            let burger = document.getElementById('nav-icon1')
+            let navbar= document.getElementById('nav-bar')
+
+            burger.addEventListener('click', e => {
+                e.preventDefault()
+                navbar.classList.toggle('open')
+                chkmenu.checked = !chkmenu.checked
+            })
+            
+            $(document).ready(function(){
+                $('#nav-icon1').click(function(){
+                    $(this).toggleClass('open');
+                });
+            });
+
+            </script>
+        
+    </header>
+    
+    <!-- ------------------------------------------------------------- -->
+    <!--                        Secciones Modal                        -->
+    <!-- ------------------------------------------------------------- -->
+    
+    <section id= "section-carrito" class="section-carrito"></section>
+    <section id= "section-deseo" class="section-deseo"></section>
+    <section id= "section-detalleProducto" class="section-detalleProducto"></section>
+    <section id= "section-pago" class="section-pago"></section>
+
+    <!-- ------------------------------------------------------------- -->
+    <!--                          Bloque Main                          -->
+    <!-- ------------------------------------------------------------- -->
+
+    <main></main>
+
+    <!-- ------------------------------------------------------------- -->
+    <!--                        Fin Bloque Main                        -->
+    <!-- ------------------------------------------------------------- -->
+
+    <!--    *********************************************** -->
+    <!--    Espacio común para el footer                    -->
+    <!--    *********************************************** -->
+
+    <!-- Definir las medias correspondientes para el suscriptor -->
+    
+    <footer class="footer">
+        <aside class="footer__registro-mailing">
+            <div class="footer__registro-mailing_header">
+                <h2>Suscribite para recibir nuestras ofertas y novedades</h2>
+            </div>
+            <!-- <div class="footer__registromailing_input"> -->
+                <form action="_post" class="footer__registro-mailing_input">
+                    <span  class="footer__registro-mailing_input">
+                        <label for="email"></label>
+                        <input required  type="email" name="email" id="email" placeholder="E-mail" autocomplete="off">
+                        <label for="name"></label>
+                        <input required type="text" name="name" id="name" placeholder="Nombre" autocomplete="off">
+                    </span>
+                    <button type="submit">Enviar</button>
+                </form>
+            <!-- </div> -->
+        </aside>
+
+        <article>
+            <div class="separador-footer">
+                
+                <div class="columna-footer">
+                    <h2>Acerca de</h2>
+                    <div>
+                        <p><a href="https://pundyk.com.ar/" title="font awesome" class="columna-footer__a">pundyk.com.ar</a></p>
+                        <p>Connecticus</p>
+                        <p>Relación con el inversor</p>
+                        <p>Responsabilidad empresaria</p>
+                        <p>Sustentabilidad</p>
+                    </div>
+                </div>
+
+                <div class="columna-footer">
+                    <h2>Documentación</h2>
+                    <div>
+                        <p><a title="Definiciones" class="columna-footer__a">Definiciones</a></p>
+                        <p><a title="Memoria" class="columna-footer__a">Memoria descriptiva | 1° etapa</a></p>
+                    </div>
+                </div>
+                <div class="columna-footer">
+                    <h2>Redes sociales</h2>
+                    <div>
+                        <ul class="columna-footer_encolumnado">
+                            <li class="columna-footer_encolumnado-fila">
+                                <a href="http://www.twitter.com/oleshito" target="_blank" class="no-decoration" title="Twitter">
+                                    <i class="fa fa-twitter columna-footer_encolumnado-fila_etiqueta"></i><span class="columna-footer_encolumnado-fila_entrada"> | Twitter</span>
+                                </a>
+                            </li>
+                            <li class="columna-footer_encolumnado-fila">
+                                <a href="http://www.facebook.com/apundyk" target="_blank" class="no-decoration" title="Facebook">
+                                    <i class="fa fa-facebook columna-footer_encolumnado-fila_etiqueta"></i><span class="columna-footer_encolumnado-fila_entrada"> | Facebook</span>
+                                </a>
+                            </li>
+                            <li class="columna-footer_encolumnado-fila">
+                                <a href="http://www.linkedin.com/in/apundyk" target="_blank" class="no-decoration" title="Linkedin">
+                                    <i class="fa fa-linkedin columna-footer_encolumnado-fila_etiqueta"></i><span class="columna-footer_encolumnado-fila_entrada"> | Linkedin</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="columna-footer">
+                    <h2>Recursos utilizados</h2>
+                    <div>
+                        <p><a href="https://fontawesome.com/" target="_blank" title="font awesome" class="columna-footer__a">Font Awesome</a></p>
+                        <p><a href="https://fonts.google.com/" target="_blank" title="Google fonts" class="columna-footer__a">Google Fonts</a></p>
+                        <p><a href="https://codepen.io/siiron/pen/QWwLoMy" target="_blank" title="Slider | Ronny Siikaluoma" class="columna-footer__a">Slider | Ronny Siikaluoma</a></p>
+                        <p><a href="https://www.w3schools.com/" target="_blank" title="W3 Schools" class="columna-footer__a">Toggle Tabs | W3 Schools</a></p>
+                        <p><a href="https://www.youtube.com/channel/UCfNzft_txAamoQvwh1j2HEQ" target="_blank" title="Going-To Internet" class="columna-footer__a">Testimonios | Going-To Internet</a></p>
+                        
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="footer-copy">
+
+            <h3>&copy; Todos los derechos reservados | Alejandro Pundyk para 
+                <b>BOOTCAMP FULL STACK ENGINEER</b>
+                 en 
+                <a href="http://www.educacionit.com.ar"  target="_blank" Title="EducacionIt">EducaciónIt</a>
+            </h3>
+            
+        </article>
+    </footer>
+
+    <!--    *********************************************** -->
+    <!--    Fin - Espacio común para el footer              -->
+    <!--    *********************************************** -->
+
+    <!--    *********************************************** -->
+    <!--    Scripts completos para index                    -->
+    <!--    *********************************************** -->
+
+    <!-- Código de librerías -->
+    
+    <!-- // SDK MercadoPago.js V2 -->
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+
+    <script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" 
+        integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer">
+    </script>
+
+    <!-- clientes http -->
+    <script src="js/clientes/http.client.js"></script>
+
+    <!-- servicios -->
+    <script src="js/servicios/carrito.js"></script>
+    <script src="js/servicios/deseo.js"></script>
+    <script src="js/servicios/producto.js"></script>
+
+    <!-- modelos -->
+    <script src="js/modelos/carrito.js"></script>
+    <script src="js/modelos/deseo.js"></script>
+    <script src="js/modelos/producto.js"></script>
+
+    <!-- controladores -->
+    <script src="js/controladores/carrito.js"></script>
+    <script src="js/controladores/deseo.js"></script>
+    <script src="js/controladores/productos.js"></script>
+
+    <!-- menúes -->
+    <script src="js/menu/alta.js"></script>
+    <script src="js/menu/buscar.js"></script>
+    <script src="js/menu/carrito.js"></script>
+    <script src="js/menu/pago.js"></script>
+    <script src="js/menu/contacto.js"></script>
+    <script src="js/menu/deseo.js"></script>
+    <script src="js/menu/hbs_helpers.js"></script>  
+    <script src="js/menu/inicio.js"></script>  
+    <script src="js/menu/nosotros.js"></script>
+    <script src="js/menu/mas_info.js"></script>
+    <!-- <script src="js/menu/modificacion_producto.js"></script> -->
+
+    <!-- Código de arranque -->
+    <script src="js/main.js"></script>
+    <script src="js/selColores.js"></script>
+
+</body>
+</html>

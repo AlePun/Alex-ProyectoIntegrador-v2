@@ -1,0 +1,231 @@
+.contacto-seccion{
+    display: block;
+    max-width: 1200px;
+    margin: auto;
+    
+    padding: 1em;
+
+}
+
+
+// form                {    display: table;      }
+// p                   {    display: table-row;  }
+// label               {    display: table-cell; }
+// input               {    display: table-cell; padding-left: 0.2em; margin: 0.6em;}
+// select              {    display: table-cell; padding-left: 0.2em; margin: 0.6em;}
+// option              {    display: table-cell; padding-left: 0.2em; margin: 0.6em;}
+
+
+
+
+
+
+
+.contacto{
+    display: block;
+    max-width: 1200px;
+    margin: 1em auto;
+    padding: 1em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    h1,
+    .contacto_titulo{
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        color:  var(--clr-primary);
+        border-bottom: 3px solid;
+        padding: 0.5em;
+    }
+    div{
+        color: var(--clr-primary);
+    }
+    em{ 
+        
+        color:  var(--clr-secondary);
+        font-weight: 500;
+    }
+}
+
+.contacto_parrafo {
+    padding: 0.5em;
+    margin-left: 0.5em;
+}
+
+
+    .contacto_form{
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .contacto-input-text{
+        margin: 0 auto;
+        label{
+            color: var(--clr-primary);
+            padding-left: 1em;
+        }
+        input {
+            border:none;
+            border-bottom: 1px solid var(--clr-primary);
+            width: 90%;
+            padding: 0.2em 0.5em;
+            margin: 1em;
+        }
+        
+        textarea {
+            border: none;
+            overflow: none;
+            outline: none;
+        
+            box-shadow: none;
+        
+            resize: none;
+
+            border: 1px solid var(--clr-primary);
+            width: 90%;
+            padding: 0.2em 0.5em;
+            margin: 1em;
+        }
+    }
+
+    .contacto-input-optin {
+        padding-left: 0.5em;
+    
+        label{
+            color: var(--clr-primary);
+            padding: 1em;
+            margin: 1em;
+        }
+    }
+
+
+    // No tengo ninguno por el momento, pero para que ya quede armado
+.contacto-input-combo{
+    margin: 0 auto;
+    label{
+        color: var(--clr-primary);
+        padding-left: 0.5em;
+    }
+    input {
+        border: 1px solid var(--clr-primary);
+        width: 90%;
+        padding-left: 0.5em;
+        padding: 0.2em 0.5em;
+        margin: 1em;
+    }
+    option {
+        border: 1px solid var(--clr-primary);
+        width: 100%;
+        padding: 0.2em 0.5em;
+        margin: 1em;
+        padding-left: 0.5em;
+    }
+}
+
+.contacto-bloque-btn{
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+    
+}
+
+.contacto-btn-form{
+    text-transform: uppercase;
+    font-size: .8em;
+    font-weight: 700;
+
+    background: var(--clr-primary);
+    color: var(--clr-white);
+    border: none;
+    margin: 0.3em;
+    padding: 1em;
+    min-width: 12em;
+
+    &:hover,
+    &:focus{
+        background: var(--clr-secondary);
+        transition: background-color 1s ease-out;
+        cursor: pointer;
+    }
+}
+
+.tecno-logos>div {
+    overflow:hidden;    
+}
+
+@media screen and (max-width: 768px){
+    .tecno-logos>div {
+        overflow-x:auto;
+    }
+}
+
+.icon-left:before {
+    content: "\73";
+}
+
+.posa {
+    position:absolute !important;
+}
+
+.posr {
+    position:relative !important;
+}
+
+.sm-fs30 {
+    font-size:30px !important;
+}
+
+.dFlexC {
+    display:flex !important;
+    align-items:center !important;
+}
+
+.space-nowrap { 
+    white-space: nowrap; 
+}
+
+.mw100p {
+    max-width:100%!important;
+}
+
+.mauto {
+    margin-left: 1em;
+}
+
+.mt70 {
+    margin-top:70px !important;
+}
+
+.sm-mt50 {
+    margin-top:50px!important;
+}
+
+.mb50 {
+    margin-bottom:50px !important;}
+
+.mr20 {
+    margin-right:20px !important;
+}
+
+.tecno-logos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bootcamp-tecnologias .tecno-logos #tecno-left{ left:-30px; }
+.bootcamp-tecnologias .tecno-logos #tecno-right{ right:-30px; }
+.bootcamp-tecnologias .tecno-logos span{ line-height: 0; color:#4E4C4C; }
+.bootcamp-tecnologias .tecno-logos>div { overflow:hidden; }
+
+.pd30_0{padding:30px 0 !important;}
+.mt50{margin-top:50px !important;}
+
+.max-width-page {
+    max-width: 1200px; 
+}
+.width-page {
+    width: 100%;
+}
+
+.fs16{font-size:16px !important;}

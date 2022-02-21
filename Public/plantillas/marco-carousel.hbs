@@ -1,0 +1,68 @@
+        <!--    Espacio para el slider - Hasta 6 elementos 
+            tomado de https://codepen.io/siiron/pen/QWwLoMy
+            Ronny Siikaluoma
+        -->
+{{!-- <script>
+    let contador  = 0
+    let contador2 = 0
+    let contador3 = 0
+</script> --}}
+
+{{#if listado.length }}
+<div class="container">
+<h1>Promociones destacadas del mes!</h1>
+    <div >
+        <div class="carousel">
+            {{#each listado}}
+            {{#if this.esPromo}}
+                {{!-- <script>
+                    contador++
+                </script> --}}
+                    <input type="radio" name="slides" id="slide-{{id}}">
+            {{/if}}
+            {{/each}}
+
+            <ul class="carousel__slides">
+                {{#each listado}}
+                {{#if this.esPromo}}
+                    {{!-- <script>
+                        contador2++
+                    </script> --}}
+                    <li class="carousel__slide">
+                        <figure>
+                            <div>
+                                <img src={{this.imagen}} alt={{this.nombre}} title={{this.nombre}}>
+                            </div>
+                            <figcaption>
+                                <h3>{{this.nombre}}</h3>
+                                <p class="credit">{{{substring this.descripcion 0 90}}}</p>
+                                <span class="credit"></span>
+                                <span class="credit">{{{ajusteMoneda this.precioDto}}}</span>
+                                <button class="carousel-button" onClick="agregarCarrito(event,'{{this.id}}','{{this.nombre}}')">Sumar al carrito</button>
+                                <button class="carousel-button" onClick="agregarDeseo(event,'{{this.id}}','{{this.nombre}}')">Sumar a deseos</button>
+                                <button class="carousel-button" onClick="masInfo(event,'{{this.id}}')">Ver más info</button>
+                            </figcaption>
+                        </figure>
+                    </li>
+                {{/if}}
+                {{/each}}
+            </ul>    
+
+            <ul class="carousel__thumbnails">
+                    {{#each listado}}
+                    {{#if this.esPromo}}
+                        {{!-- <script>
+                            contador3++
+                        </script> --}}
+                            <li>
+                                <label for="slide-{{id}}"><img src={{this.imagen}} alt={{this.nombre}} title={{this.nombre}}></label>
+                            </li>
+                    {{/if}}
+                    {{/each}}
+                </ul>
+            {{else}}
+                <h2>No se encontraron productos</h2>
+            {{/if}}
+        </div>
+    </div>
+</div>

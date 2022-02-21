@@ -1,0 +1,61 @@
+{{#if producto.length}}
+    {{#each producto}}
+
+        <div class="detalleProducto__cabecera">
+            <h3>Detalle de producto.</h3>
+            {{!-- <h3 class="btnCierre" onclick="productoController.ocultarDetalleProducto()">X</h3> --}}
+            <h3 class="btnCierre" onclick="initDetalleProducto()">X</h3>
+        </div>
+    <hr>
+
+        <a class="detalleProducto">
+            <section  class="bloqueHorizontal" data-id='{{this.id}}' data-titulo='{{this.nombre}}'>
+                {{!-- solo la imagen --}}
+                <div class="medioBloque">
+                        <div class="detalleProducto__image"
+                                style="background-image: url('{{this.imagen}}')">
+                        </div>
+                </div>
+
+
+                <div class="bloqueHorizontal">
+                        <div>
+                            <div class="detalleProducto__bloqueInfo">
+                                <h3 class="detalleProducto__titulo">{{this.nombre}}</h3>
+                                <div class="detalleProducto__descripcion">
+                                    <p>{{{substring this.descripcion 0 1200}}}</p>
+                                <div class="detalleProducto__descripcion">
+                                    <span>Este producto tiene un evaluación de </span>
+                                    <span {{{ajusteEval this.evaluacion this.evaluadores}}} > con {{this.evaluadores}} evaluaciones. </span>
+                                <div class="detalleProducto__descripcion">
+                                    <span>Precio de lista: </span><span class="detalleProducto__content-price-reg">{{{ajusteMoneda this.precioLista}}}</span> <span> | </span>
+                                    <span>Precio promocional: </span><span class="detalleProducto__content-price-disc">{{{ajusteMoneda this.precioDto}}}</span>
+                                </div>
+                                <div class="detalleProducto__descripcion">
+                                    <span>Observaciones: </span>
+                                    <span>{{this.observacion01}}</span> <span> | </span>
+                                    <span>{{this.observacion02}}</span> <span> | </span>
+                                    <span>{{this.observacion03}}</span>
+                                </div>
+                            </div>
+                        <!-- Barra producto - visible en hover -->
+                        <div class="bloqueHorizontal" >
+                            
+                            <span class="detalleProducto__barra-producto__deseos" onClick="agregarDeseo(event,'{{this.id}}','{{this.nombre}}')">
+                                <i class="fa fa-heart">Agregar a deseos</i>
+                            </span>
+                            
+                            <span class="detalleProducto__barra-producto__comprar" onClick="agregarCarrito(event,'{{this.id}}','{{this.nombre}}')">
+                                <i class="fa fa-cart-plus">Agregar al carrito</i>
+                            </span>
+                            
+                        </div>
+                        <!-- Fin barra producto - visible en hover -->
+                        </div>
+                </div>
+            </section>
+        </a>
+    {{/each}}
+{{else}}
+    <h2>No se encontró el producto</h2>
+{{/if}}

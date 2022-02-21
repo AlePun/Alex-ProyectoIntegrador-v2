@@ -1,0 +1,47 @@
+[
+	{
+		"nombre": "rewrwey",
+		"precio": "346",
+		"stock": "3464",
+		"marca": "eryre",
+		"categoria": "ery",
+		"detalles": "ery",
+		"foto": "reryrey",
+		"envio": true,
+		"id": "1"
+	},
+	{
+		"imagen": "",
+		"nombre": "123",
+		"categoria": "123",
+		"descripcion": "123",
+		"precioLista": "123",
+		"precioDto": "12",
+		"evaluacion": "31",
+		"evaluadores": "321",
+		"stock": "31",
+		"observacion01": "312",
+		"observacion02": "13",
+		"observacion03": "132",
+		"esPromo": false,
+		"HtmlDesc": "123",
+		"id": "11"
+	},
+	{
+		"imagen": "",
+		"nombre": "123",
+		"categoria": "123",
+		"descripcion": "123",
+		"precioLista": "13",
+		"precioDto": "11",
+		"evaluacion": "312",
+		"evaluadores": "31",
+		"stock": "31",
+		"observacion01": "312",
+		"observacion02": "321",
+		"observacion03": "321",
+		"esPromo": false,
+		"HtmlDesc": "312457978",
+		"id": "111"
+	}
+]
